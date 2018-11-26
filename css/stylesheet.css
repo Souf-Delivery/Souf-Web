@@ -4,24 +4,83 @@
 }
 body{
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    background-color: #f0f0f0;
+    /*background-image: url("../imagens/background12.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;*/
+    background-color: #f2f2f2;
+}
+body a{
+    text-decoration: none;
+
 }
 
 /* Header starts here*/
 header{
     background-color: #FDFFFE;
     color: #000;
+    border-bottom: 5px solid #133C76;
+    margin-bottom: 5px;
 }
 header a{
     color:#000;
 }
+
+header #hr-nav{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border:0.5px solid #598AB1;
+  
+}
+#header-top{
+    font-size: 12px;
+    padding: 5px;
+    text-decoration: none;
+}
+#header-phone-email{
+    float: left;
+}
+#header-phone, #header-email{
+    font-size: 12px;
+    margin: 0 5px 0 5px;
+    color: #4D89B8;
+    
+}
+#header-email-text, #header-phone-text{
+   color: #133C76;
+   padding: 0 5px 0 5px;
+}
+#header-redes{
+    float: right;
+    font-size: 14px;
+    margin-right: 10px;
+}
+#header-redes a{
+    margin-right: 5px;
+}
+#header-phone-email #header-email:hover{
+    color: #133C76;
+}
+#header-redes a:hover{
+    font-size: 16px;
+}
+#div-header-login{
+float: right;
+margin: 0 5px 2px 5px;
+}
+#div-header-login a{
+    color: #133C76;
+}
+#div-header-login a:hover{
+    text-decoration: underline;
+}
 nav{
 	width: 70%;
 	margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 10px;
     overflow: auto;
 }
-#div-logo{
+#div-logo{float: left;
     width: 250px;
     float: left;
     margin-left: 6px;
@@ -31,6 +90,36 @@ img{
     width: 100%;
     height: 100%;
 }
+nav #menu{
+    float: right;
+    margin-top: 62px;
+}
+nav #menu ul li{
+    display: inline;
+    padding: 10px 10px 12px 10px;
+    margin: 0 5px 0 5px;
+}
+nav #ativa li{
+    background-color: #133C76;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+nav #ativa{
+   color: #FDFFFE; 
+}
+nav #menu ul li:hover{
+    background-color: #133C76;
+    border-radius: 10px 10px 0px 0px;
+}
+nav #menu ul a:hover{
+    color:#FDFFFE;  
+}
+nav #menu ul{
+    width: 100%;
+    text-align:right;
+
+}
+/* --------------- ---------*/
 #div-logo-right-side{
     width: 200px;
     float: right;
@@ -48,7 +137,7 @@ img{
     text-decoration: none; 
     margin-right: 10px;
 }
-
+/* ---------------- -----------*/
 #header_social{
     margin-top: 15px;
 }
@@ -67,12 +156,14 @@ img{
     color: #143E69;
     text-decoration: none;
 }
+
 #nav-left{
 	width:74%;
 	list-style-type: none;
     font-size: 14px;
     /*font-weight: 700;*/
 }
+
 #div-ul{
     width: 100%;
     float: left; 
@@ -100,8 +191,8 @@ img{
 }
 
 #div-ul ul li a:hover{
-    color: red;
-    border-bottom: 0.5mm ridge red;     
+    color: #B4DCE9;
+    border-bottom: 0.5mm ridge #B4DCE9;     
 }
 #div-ul ul li a:active{
     background-color: green;     
@@ -110,18 +201,199 @@ img{
 /* ------------------ Body - wrapper ----------*/
 #wrapper{
     width: 70%;
-    margin: 5px auto;
-    margin-bottom: 100px;
+    margin: 0 auto;
     overflow: auto;
     background-color: #fff;
 }
-#wrapper h1{
+#wrapper h2{
+    font-size: 30px;
     text-align: center;
+    padding: 10px;
+
 }
-#wrapper .p_center{
-    margin: 10px;
+#div-slideshow{
+    width: 100%;
+    height: 400px;
+}
+
+#wrapper #feed{
+    width: 60%;
+    float: left;
+    border: 1px solid red;
+
+}
+#wrapper #variedades{
+    width: 39%;
+    float: right;
+    border: 1px solid red;
+}
+
+/*---------------- Quem somos -----------------*/
+#mvv{
+    width: 100%;
+    overflow: auto;;
+}
+#missao, #visao, #valores, #nossos-clientes, #nossos-parceiros, #nossos-objectivos{
+    width: 30%;
+    float: left;
+    padding: 10px;
+    border: 1px solid red;
+}
+/*#nossos-objectivos{
+
+}
+#nossos-clientes, #nossos-parceiros{
+    width: 50%;
+}*/
+
+/* ------- Slideshow ----------------*/
+#slideshow_{
+    width: 100%;
+    height: 350px;
+    overflow:hidden;
+}
+#slideshow_ img{
+    width: 100%;
+    height: 100%;
+}
+
+/*---------------- Contact Page -----------------*/
+
+#formNaside{
+    width: 90%;
+    margin:0 auto;
+    padding: 10px;
+    overflow: auto;
+}
+.p-contactos{
     text-align: center;
+    padding: 5px;
+    font-style: italic;
 }
+#endereco{
+    width: 35%;
+    float: left;
+    padding: 20px;
+    font-size: 14px;
+
+}
+#endereco h3{
+    font-size: 16px;
+    padding: 0 0 5px 0;
+}
+#endereco p{
+    width: 100%;
+    font-size: 13px;
+    padding:5px 0 5px 0;
+}
+#form{
+
+    width: 50%;
+    overflow: auto;
+    float: left;
+    padding: 2%;
+}
+#form p{
+    font-size: 13px;
+    padding-top:10px;
+    padding-left: 20px;
+    text-align: justify;
+    padding-right: 20px;
+}
+
+#contact_form {
+    width:95%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 auto; 
+}
+
+#contact_form .label{
+    padding:1% 1% 0 1%;
+    float:left;
+}
+
+#contact_form .input[type="text"],.input[type="email"]{
+    width:100%;
+}
+#contact_form .textarea{
+    padding-bottom: 20px;
+    width:97.5%;
+}
+#contact_form .input, 
+#contact_form .textarea {
+    border: 1px solid #CEE1E8;
+    padding:1%;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+#contact_form .input,  
+#contact_form .textarea, 
+#contact_form .label {
+    font-size:14px;
+    margin-bottom:5px;
+}
+#contact_form .submit{
+    width:100%;
+    margin:3px 0 0 0;
+    border:1px solid #ccc;
+    padding:6px 3px 6px 3px;
+    border-radius:2px;
+    -ms-border-radius:2px;
+    -webkit-border-radius:2px;
+    margin-bottom:20px;
+}
+#contact_form input[type="submit"]:hover{
+    color:#FFF;
+    background-color: #143E69;
+    border-radius:5px;
+    -ms-border-radius:5px;
+    -webkit-border-radius:5px;
+    border:1px solid green;
+}
+.asterix{
+    color:#ff0000;
+}
+input:focus:invalid {
+    border: solid red;
+}
+input:focus:valid {
+    border:solid green;
+}
+p{
+    overflow: auto;
+}
+#ftick, #ltick, #pntick, #etick, #ptick{
+    float: right;
+    margin-right: 8px;
+    color: green;
+}
+#fcross, #lcross, #pncross, #ecross, #pcross{
+    float: right;
+    margin-right: 8px;
+    color: red;
+}
+
+#contactUs{
+    width:29%;
+    float:inherit;
+    border: 1px solid #333;
+}
+
+/* ------ Map ------*/
+#mapa{
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+#mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
 
 /* ------ Footer ------*/
 
@@ -130,7 +402,7 @@ footer{
     background-color: #4d5c75;
     color: #fff;
     bottom: 0;
-    position: fixed;
+    /*position: fixed;*/
 
 }
 footer a{

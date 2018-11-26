@@ -3,7 +3,7 @@
 <html>    
 <head>
     <meta charset="utf-8">
-    <title>Lojas e serviços</title>
+    <title>Souf Delivery - Home</title>
     <meta name="keywords" content="Souf Delivery, Souf">
     <meta name="description" content="A Souf delivery presta serviço de entregas rápidas e com qualidade, num ambiente de mercado amplo e que necessita de soluções ao problema actual de falta de capacidade de resposta eficiente na entrega das mercadorias. Nos facilitamos o fluxo de compras.">
     <link rel="stylesheet" href="css/stylesheet.css">
@@ -12,15 +12,18 @@
     <script type="text/javascript" src="js/scripts.js"></script>
     <link rel="icon" href="imagens/favicon.png">
 </head>
-<!--
+<!-- 
 Author: Tiago Afonso Kayaya
 Date  : 12/11/2018
 
 index.html 
 Scenario
---> 
-<body>
-    <header>    
+-->
+<body onload="main()">
+    <header>
+        <div>
+            <span><a  class="fa fa-phone-square" href="" target="_blank">+244 998 0808090</a></span>
+        </div>   
         <nav>
             <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
             <div id="div-logo-right-side">
@@ -43,53 +46,10 @@ Scenario
                     <li><a href="quem-somos.html">Quem somos</a></li>
                 </ul>
         </div>
+        
     </header>
     <div id="wrapper">
-        <h2>O Porque optar pelos nossos serviços</h2>
-        <p>Acrescentamos valor aos serviços prestados pelos nossos parceiros pela:</p>
-        <ul>
-            <li>Pontualidade e responsabilidade nos serviços de entrega</li>
-            <li>Atendimento personalizado</li>
-            <li>Qualidade nos nossos serviços</li>
-            <li>Preços acessíveis</li>
-            <li>Inovamos com consciência e criatividade na diversificação dos nossos serviços</li>
-        </ul>
-        <h3>As nossas prioridades</h3>
-        <ul>
-            <li>Atendimento padronizado para com as empresas parceiras</li>
-            <li>Atendimento personalizado a clientes individuais</li>
-        </ul>
-    </div><!-- End Wrapper -->
-    <footer>
-        <div id="footer-wrapper">
-            <div id="footer-sobre-nos">
-                <h6>Sobre nós</h6>
-                <ul>
-                    <li><a href="">A empresa</a></li>
-                    <li><a href="">Parcerias</a></li>
-                    <li><a href="">Serviços</a></li>
-                </ul>
-            </div>
-            <div id="footer-local">
-                <h6>Localização</h6>
-                <p>Benfica Estrada no 100, Rua do Por-do-Sol, Casa no 166, Luanda-Angola</p>
-                <br><p><a href="">Ver no mapa</a></p>
-            </div> 
-        
-            <div id="footer-outros">
-                <h6>Outros</h6>
-                <ul>
-                    <li><a href="">Perguntas frequentes</a></li>
-                    <li><a href="">Envie-nos a sua opinião</a> </li>
-                    <li><a href="">Recrutamento</a></li>
-                </ul>
-            </div>
-            <div id="footer-social">
-                <h6>Redes sociais</h6>
-            </div>
-        </div>             
-        <p id="copyright">Souf Delivery &copy; <?php echo date("Y"); ?> 2018. Todos os direitos reservados.</p>
-        
+        <p>Website em Construção. Webpage under development.</p>
     </footer><!-- End footer -->
 </body>
 </html>

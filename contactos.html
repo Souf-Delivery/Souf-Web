@@ -18,35 +18,95 @@ Date  : 12/11/2018
 
 index.html 
 Scenario
--->
+--> 
 <body>
-    <header>    
-        <nav>
-            <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
-            <div id="div-logo-right-side">
-                <div id="div-login"><p><a href="index.php">Registrar</a> <a href="login.php">Login</a></p></div>
-                <div id=header_social>
-                    <ul>
-                        <li><a  class="fa fa-facebook" href="" target="_blank"></a></li>
-                        <li><a class="fa fa-twitter" href="" target="_blank"></a></li>
-                        <li><a class="fa fa-instagram" href="" target="_blank"></a></li>
-                    </ul>
-                </div><!-- End header_social -->
+    <header>
+        <div id="header-top">
+            <div id="header-phone-email">
+                <a id="header-phone"  class="fa fa-phone-square"><span id="header-phone-text">+244 998 808090</span> </a>
+                <a id="header-email" class="fa fa-envelope-square" href="" target="_blank"><span id="header-email-text">souf.delivery@gmail.com</span></a>
+            </div>
+            <div id="div-header-login">
+                <a class="fa fa-user" href="login.php"> Login </a><span> | </span><a href="index.php">Registrar</a>
+            </div>
+            <div id="header-redes">
+                <a  class="fa fa-facebook" href="" target="_blank"></a>
+                <a class="fa fa-instagram" href="" target="_blank"></a>
             </div>
             
-        </nav>
-        <div id="div-ul">
-                <ul class="ul" id="nav-left">
-                    <li><a href="index.html">Casa</a></li>
-                    <li><a href="lojas-serviços.html">Lojas & serviços</a></li>
-                    <li><a href="contactos.html">Contactos</a></li>
-                    <li><a href="quem-somos.html">Quem somos</a></li>
-                </ul>
         </div>
+        <hr id="hr-nav" />   
+        
+        <nav>
+            <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
+            <div id="menu">
+                <ul class="ul" id="nav-left">
+                    <a href="index.html"><li><span class="fa fa-home"></span> Casa</li></a>
+                    <a href="lojas-serviços.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
+                    <a id="ativa" href="contactos.html"><li><span class="fa fa-at"></span> Contactos</li></a>
+                    <a href="quem-somos.html"><li><span class="fa fa-users" ></span> Quem somos</li></a>
+                </ul>
+            </div> 
+        </nav>
+        
     </header>
     <div id="wrapper">
-        <p>Contactos</p>
+        <h2>Como podemos ajuda-lo?</h2>
+         <p class="p-contactos">A nossa equipa esta disponível para atendê-lo e respondê-lo o mais rápido possivel.</p>
+        <div id="formNaside">
+            <div id="endereco">
+                    <h3>Endereço</h3>
+                    <p>Casa No 166, Rua Por do Sol, Estrada No 100, Benfica, Belas,</p>
+                    <p>Luanda - Angola</p>
+                    <p class="fa fa-phone-square"> Telefone: +244 998 808090</p>
+                    <p class="fa fa-envelope-square"> Email: souf.delivery@gmail.com</p>
+                    <p class="fa fa-map-marked"><a href="contactos.html#mapa">Ver mapa</a></p><br /><br />
+                            
+                    <h3>Horário de atendimento</h3> 
+                    <p>08:00 - 22:00 Segunda - Sexta-feira</p>
+                    <p>08:00 - 22:00 Sábado</p>
+                    <p>08:00 - 22:00 Domingo</p>           
+                </div>
+            <div id="form">
+                    <form id="contact_form"> 
+                        <p>Envie-nos a sua mensagem através do nosso formulário.</p>    
+                            <p>
+                            <label class="label">Nome<span class="asterix">*</span> </label>
+                            <input class="input" type="text" id="fname" name="fname"><span id="ftick" style="display:none"> &#10003; </span> <span id="fcross" style="display:none"> &#10007; </span>
+                            </p>
+                            <p class="clear">
+                            <label class="label">Telefone<span class="asterix">*</span> </label>
+                            <input class="input" type="text" id="pnumber" name="pnumber"><span id="pntick" style="display:none"> &#10003; </span> <span id="pncross" style="display:none"> &#10007; </span>
+                            </p>
+                            <p class="clear">
+                            <label class="label">Email<span class="asterix">*</span> </label>
+                            <input class="input" type="text" id="email" name="email" placeholder="souf-delivery@examplo.com"><span id="etick" style="display:none"> &#10003; </span> <span id="ecross" style="display:none"> &#10007; </span>
+                            </p>
+                            
+                        <!-- Checkboxes allow a user select zero or more options from the total number of choices-->
+                        <p class="clear">
+                        <label for="pet-select">Assunto:</label>
+
+                        <select id="assunto">
+                            <option value="">--Selecione um campo--</option>
+                            <option value="dog">Esclarecer dúvidas acerca dos nossos serviços</option>
+                            <option value="cat">Solicitar um serviço</option>
+                            <option value="hamster">Fechar um contrato</option>
+                            <option value="parrot">Outro</option>
+                        </select>
+                        </p>
+                        <p class="clear">
+                        <label class="message">Mensagem</label>
+                        <textarea class="textarea" id="message" name="message" placeholder="Digite a tua mensagem!" rows="9" cols="5"></textarea>
+                        <input class="submit" type="submit" value="Enviar">
+                        </p>
+                    </form>
+                </div><!-- End div form -->
+                </div>
     </div><!-- End Wrapper -->
+<div id="mapa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.376137235201!2d13.15512431455727!3d-8.937443694291202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a518b28bb03c887%3A0xd8887cc63730e79c!2sSouf+Delivery!5e0!3m2!1sen!2sao!4v1543209782880" width="1200" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
 <footer>
         <div id="footer-wrapper">
             <div id="footer-sobre-nos">

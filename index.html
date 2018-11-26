@@ -9,43 +9,88 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="icons/css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="jquery.slides.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+
     <link rel="icon" href="imagens/favicon.png">
 </head>
-<!--
+<!-- 
 Author: Tiago Afonso Kayaya
 Date  : 12/11/2018
 
 index.html 
 Scenario
 -->
-<body>
-    <header>    
-        <nav>
-            <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
-            <div id="div-logo-right-side">
-                <div id="div-login"><p><a href="index.php">Registrar</a> <a href="login.php">Login</a></p></div>
-                <div id=header_social>
-                    <ul>
-                        <li><a  class="fa fa-facebook" href="" target="_blank"></a></li>
-                        <li><a class="fa fa-twitter" href="" target="_blank"></a></li>
-                        <li><a class="fa fa-instagram" href="" target="_blank"></a></li>
-                    </ul>
-                </div><!-- End header_social -->
+<body onload="main()">
+    <header>
+        <div id="header-top">
+            <div id="header-phone-email">
+                <a id="header-phone"  class="fa fa-phone-square"><span id="header-phone-text">+244 998 808090</span> </a>
+                <a id="header-email" class="fa fa-envelope-square" href="" target="_blank"><span id="header-email-text">souf.delivery@gmail.com</span></a>
+            </div>
+            <div id="div-header-login">
+                <a class="fa fa-user" href="login.php"> Login </a><span> | </span><a href="index.php">Registrar</a>
+            </div>
+            <div id="header-redes">
+                <a  class="fa fa-facebook" href="" target="_blank"></a>
+                <a class="fa fa-instagram" href="" target="_blank"></a>
             </div>
             
-        </nav>
-        <div id="div-ul">
-                <ul class="ul" id="nav-left">
-                    <li><a href="index.html">Casa</a></li>
-                    <li><a href="lojas-serviços.html">Lojas & serviços</a></li>
-                    <li><a href="contactos.html">Contactos</a></li>
-                    <li><a href="quem-somos.html">Quem somos</a></li>
-                </ul>
         </div>
+        <hr id="hr-nav" />   
+        
+        <nav>
+            <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
+            <div id="menu">
+                <ul class="ul" id="nav-left">
+                    <a id="ativa" href="index.html"><li><span class="fa fa-home"></span> Casa</li></a>
+                    <a href="lojas-serviços.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
+                    <a href="contactos.html"><li><span class="fa fa-at"></span> Contactos</li></a>
+                    <a href="quem-somos.html"><li><span class="fa fa-users" ></span> Quem somos</li></a>
+                </ul>
+            </div> 
+        </nav>
+        
     </header>
+    <div id="div-slideshow">
+            <img src="imagens/2.jpg" id="slideshow" alt="imagesslideshow">
+    </div>
+    
     <div id="wrapper">
-        <p>Pagina principal</p>
+        
+        
+        <p>"Prestamos serviços de entrega rápidas e com qualidade e facilitamos o fluxo de compras".</p>
+        <div id="feed">
+            <h3>Feed e noticias Recentes</h3>
+            <p>Left</p>
+        </div>
+        <div id="variedades">
+            <div id="encomenda-info">
+                <h4>Como fazer uma encomenda</h4>
+                <h5>Particular</h5>
+                <ul>
+                    <li>Selecione a loja</li>
+                    <li>Selecione o produto nas nossa galeria de produtos</li>
+                    <li>Insira a quantidade dos mesmos</li>
+                    <li>Adicione detalhes do endereço para a entrega do produto</li>
+                    <li>Selecione o método de pagamento</li>
+                    <li>Assinar factura (Optional)</li>
+                </ul>
+                <h5>Empresa</h5>
+                <ul>
+                    <li>Descreve os produtos e suas quantidades</li>
+                    <li>Adicione detalhes do endereço para a coleção e entrega do produto</li>
+                    <li>Selecione o método de pagamento</li>
+                    <li>Assinar factura (Optional)</li>
+
+                </ul>
+            </div>
+            <div id="produtos">
+                <h4>Novos Produtos</h4>
+                <div id="novos-produtos"></div>
+            </div>
+        </div>
     </div><!-- End Wrapper -->
     <footer>
         <div id="footer-wrapper">

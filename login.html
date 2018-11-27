@@ -3,10 +3,11 @@
 <html>    
 <head>
     <meta charset="utf-8">
-    <title>Souf Delivery - Home</title>
+    <title>Login | Souf Delivery</title>
     <meta name="keywords" content="Souf Delivery, Souf">
     <meta name="description" content="A Souf delivery presta serviço de entregas rápidas e com qualidade, num ambiente de mercado amplo e que necessita de soluções ao problema actual de falta de capacidade de resposta eficiente na entrega das mercadorias. Nos facilitamos o fluxo de compras.">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/styles-pages.css">
     <link rel="stylesheet" href="icons/css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -26,11 +27,11 @@ Scenario
     <header>
         <div id="header-top">
             <div id="header-phone-email">
-                <a id="header-phone"  class="fa fa-phone-square"><span id="header-phone-text"><span class="span-font">+244 998 808090</span></span> </a>
-                <a id="header-email" class="fa fa-envelope-square" href="" target="_blank"><span id="header-email-text"><span class="span-font">souf.delivery@gmail.com</span></span></a>
+                <a id="header-phone"  class="fa fa-phone-square"><span id="header-phone-text">+244 998 808090</span> </a>
+                <a id="header-email" class="fa fa-envelope-square" href="" target="_blank"><span id="header-email-text">souf.delivery@gmail.com</span></a>
             </div>
             <div id="div-header-login">
-                <a class="fa fa-user" href="login.html"><span class="span-font"> Login </span></a><span> | </span><a href="registro.html">Registrar</a>
+                <a class="fa fa-user" href="login.html"> Login </a><span> | </span><a href="registro.html">Registrar</a>
             </div>
             <div id="header-redes">
                 <a  class="fa fa-facebook" href="" target="_blank"></a>
@@ -44,7 +45,7 @@ Scenario
             <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
             <div id="menu">
                 <ul class="ul" id="nav-left">
-                    <a id="ativa" href="index.html"><li><span class="fa fa-home"></span> Casa</li></a>
+                    <a href="index.html"><li><span class="fa fa-home"></span> Casa</li></a>
                     <a href="lojas-serviços.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
                     <a href="contactos.html"><li><span class="fa fa-at"></span> Contactos</li></a>
                     <a href="quem-somos.html"><li><span class="fa fa-users" ></span> Quem somos</li></a>
@@ -53,44 +54,25 @@ Scenario
         </nav>
         
     </header>
-    <div id="div-slideshow">
-            <img src="imagens/2.jpg" id="slideshow" alt="imagesslideshow">
-    </div>
     
     <div id="wrapper">
+        <div id="login-div">
+            <h2 id="h2">Entre na sua conta</h2>
+            <p>ou <a href="registro.html" target="_blank">registre-se</a> agora!</p>
+                <form id="login_form">
+                    <p> 
+                    <label class="label">Username</label>
+                    <input class="input" type="text" id="username" name="username"><span id="usertick" style="display:none"> &#10003; </span> <span id="usercross" style="display:none"> &#10007; </span>
+                    </p>
+                    <p class="clear">
+                    <label class="label">Password</label>
+                    <input class="input" type="password" id="password" name="password"><span id="passtick" style="display:none"> &#10003; </span> <span id="passcross" style="display:none"> &#10007; </span>
+                    </p>
+                    <input class="submit" type="submit" value="Entrar">
+                </form>
+            </div><!-- End div form -->
+            <p id="p-senha">Esqueceu a senha?<a href=""> Recuperar</a></p>
         
-        
-        <p>"Prestamos serviços de entrega rápidas e com qualidade e facilitamos o fluxo de compras".</p>
-        <div id="feed">
-            <h3>Feed e noticias Recentes</h3>
-            <p>Left</p>
-        </div>
-        <div id="variedades">
-            <div id="encomenda-info">
-                <h4>Como fazer uma encomenda</h4>
-                <h5>Particular</h5>
-                <ul>
-                    <li>Selecione a loja</li>
-                    <li>Selecione o produto nas nossa galeria de produtos</li>
-                    <li>Insira a quantidade dos mesmos</li>
-                    <li>Adicione detalhes do endereço para a entrega do produto</li>
-                    <li>Selecione o método de pagamento</li>
-                    <li>Assinar factura (Optional)</li>
-                </ul>
-                <h5>Empresa</h5>
-                <ul>
-                    <li>Descreve os produtos e suas quantidades</li>
-                    <li>Adicione detalhes do endereço para a coleção e entrega do produto</li>
-                    <li>Selecione o método de pagamento</li>
-                    <li>Assinar factura (Optional)</li>
-
-                </ul>
-            </div>
-            <div id="produtos">
-                <h4>Novos Produtos</h4>
-                <div id="novos-produtos"></div>
-            </div>
-        </div>
     </div><!-- End Wrapper -->
     <footer>
         <div id="footer-wrapper">

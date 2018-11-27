@@ -13,7 +13,10 @@ body a{
     text-decoration: none;
 
 }
-
+body h2{
+    font-family: Cursive;
+    font-size: 35px;
+}
 /* Header starts here*/
 header{
     background-color: #FDFFFE;
@@ -70,6 +73,10 @@ margin: 0 5px 2px 5px;
 }
 #div-header-login a{
     color: #133C76;
+}
+.span-font{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
 }
 #div-header-login a:hover{
     text-decoration: underline;
@@ -391,6 +398,10 @@ p{
 #mapa iframe{
     width: 100%;
     height: 100%;
+}
+/* ---------- Quem somos -------------*/
+#wrapper .p-quem-somos{
+    padding: 5px 30px 30px 30px;
 }
 
 

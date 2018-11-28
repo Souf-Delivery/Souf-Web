@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>    
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-16">
     <title>Registro | Souf Delivery</title>
     <meta name="keywords" content="Souf Delivery, Souf">
     <meta name="description" content="A Souf delivery presta serviço de entregas rápidas e com qualidade, num ambiente de mercado amplo e que necessita de soluções ao problema actual de falta de capacidade de resposta eficiente na entrega das mercadorias. Nos facilitamos o fluxo de compras.">
@@ -23,7 +23,7 @@ Date  : 12/11/2018
 index.html 
 Scenario
 -->
-<body onload="main()">
+<body>
     <header>
         <div id="header-top">
             <div id="header-phone-email">
@@ -56,51 +56,69 @@ Scenario
     </header>
     
     <div id="wrapper">
-        <div id="login-div">
-            <h2 id="h2">Criar uma conta</h2>
+        <div id="signup-div"><h2>Criar uma conta</h2>
             <p>ou <a href="login.html" target="_blank">entrar em sua conta</a>!</p>
-                <form id="login_form">
-                    <p> 
-                    <label class="label">Nome</label>
-                    <input class="input" type="text" id="name" name="name"><span id="nametick" style="display:none"> &#10003; </span> <span id="namecross" style="display:none"> &#10007; </span>
-                    </p>
-                    <p class="clear">
+            <form id="signup-form">
+                <p class="clear"> 
+                <label class="label">Nome</label>
+                <input class="input" type="text" id="name" name="name">
+                <span id="nametick" style="display:none"> &#10003; </span> 
+                <span id="namecross" style="display:none"> &#10007;</span>
+                </p>
+                <p class="clear">
                     <label class="label">Email</label>
                     <input class="input" type="text" id="password" name="email"><span id="emailtick" style="display:none"> &#10003; </span> <span id="emailcross" style="display:none"> &#10007; </span>
-                    </p>
-                    <p class="clear">
+                 </p>
+                  <p class="clear">
                     <label class="label">Telefone</label>
                     <input class="input" type="number" id="telefone" name="telefone"><span id="teltick" style="display:none"> &#10003; </span> <span id="telcross" style="display:none"> &#10007; </span>
+                </p>
+                <p class="clear">
+                    <label class="label" for="month-select">Data de Nascimento<spam class="small-spam">(ou data de fundação)</spam></label>
+                        <p id="birth-date">
+                        <input class="input" type="text" id="dia" name="dia" placeholder="Dia">
+                        <select id="mes">
+                            <option value="">--Mês--</option>
+                            <option value="1">Janeiror</option>
+                            <option value="2">Fevereiro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
+                        <input class="input" type="text" id="ano" name="ano" placeholder="Ano">
+                        </p>
                     </p>
                     <p class="clear">
-                    <label for="pet-select">Data de Nascimento</label>
-                    <input class="input" type="text" id="dia" name="dia">
-                    <select id="mes">
-                        <option value="">Mês</option>
-                        <option value="1">Janeiror</option>
-                        <option value="2">Fevereiro</option>
-                        <option value="3">Março</option>
-                        <option value="4">Abril</option>
-                        <option value="5">Maio</option>
-                        <option value="6">Junho</option>
-                        <option value="7">Julho</option>
-                        <option value="8">Agosto</option>
-                        <option value="9">Setembro</option>
-                        <option value="10">Outubro</option>
-                        <option value="11">Novembro</option>
-                        <option value="12">Dezembro</option>
-                    </select>
-                    <input class="input" type="text" id="ano" name="ano">
+                    <label class="label">Endereço:</label>
+                    <input class="input" type="password" id="password" name="password" placeholder="Numero da Casa">
+                    <input class="input" type="password" id="password" name="password" placeholder="Nome da rua">
+                    <input class="input" type="password" id="password" name="password" placeholder="Bairro">
+                    <input class="input" type="password" id="password" name="password" placeholder="Município">
+                    <input class="input" type="password" id="password" name="password" placeholder="Província">
+                    <span id="passtick" style="display:none"> &#10003; </span> <span id="passcross" style="display:none"> &#10007; </span>
                     </p>
                     <p class="clear">
                     <label class="label">Senha</label>
                     <input class="input" type="password" id="password" name="password"><span id="passtick" style="display:none"> &#10003; </span> <span id="passcross" style="display:none"> &#10007; </span>
                     </p>
+                    <p class="clear">
+                    <label class="label"> Repetir a senha</label>
+                    <input class="input" type="password" id="password" name="password"><span id="passtick" style="display:none"> &#10003; </span> <span id="passcross" style="display:none"> &#10007; </span>
+                    </p>
+                    <p class="clear">Ao criar uma nova conta, você concorda com os nossos <a href="">Termos de Serviço</a> e <a href="">Política de Privacidade</a>. </a></p>
+                    <p class="clear">
                     <input class="submit" type="submit" value="Criar nova conta">
-                </form>
-            </div><!-- End div form -->
-            <p id="p-senha">Ao criar uma nova conta, você concorda com os nossos <a href="">Termos de Serviço</a> e <a href="">Política de Privacidade</a>. </a></p>
-        
+                    </p>
+            </form>
+        </div>
+            <!--<p id="p-senha">Ao criar uma nova conta, você concorda com os nossos <a href="">Termos de Serviço</a> e <a href="">Política de Privacidade</a>. </a></p>-->
     </div><!-- End Wrapper -->
     <footer>
         <div id="footer-wrapper">

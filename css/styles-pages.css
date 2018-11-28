@@ -37,12 +37,10 @@
 	text-align: center;
 	font-weight: 700;
 	font-size: 13px;
-
-
 }
 #p-senha{
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	font-size: 14px;
 }
 #p-senha a{
@@ -50,4 +48,73 @@
 }
 #login_form .submit:hover{
 	background-color: #143E69;
+}
+
+/* ----------------- Cadastro  ---------------------*/
+#signup-div{
+}
+#signup-div h2{
+	font-family: Cursive;
+	font-size: 35px;
+	text-align: center;
+	padding-bottom:1px;
+}
+#signup-div p{
+	text-align: center;
+	font-size: 14px;
+}
+#signup-div p a{
+	text-decoration: underline;
+}
+#signup-div #signup-form{
+	width: 300px;
+	margin: 20px auto;
+	overflow: auto;
+}
+#signup-form p{
+	text-align: left;
+	margin-top: 10px;
+	font-size: 14px;
+}
+#signup-form .label, #signup-form .input, #signup-form .submit{
+	text-align: left;
+	width: 95%;
+	margin: 3px 7px 3px 7px;
+	padding: 1px 0 1px 0px;
+	border-radius: 5px;
+}
+#signup-form .submit{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px 0 5px 0px;
+}
+
+#signup-form .submit{
+	width: 92%;
+	background-color: #4D89B8;
+	color: #ffffff;
+	border: 1px solid  #B4DCE9;
+	text-align: center;
+	font-weight: 700;
+	font-size: 13px;
+}
+#signup-form .submit:hover{
+	background-color: #143E69;
+}
+#signup-form #dia{
+	width: 30px;
+}
+#signup-form #mes{
+	width: 130px;
+}
+#signup-form #ano{
+	width: 85px;
+}
+#birth-date{
+	padding: 0;
+	margin: 0;
+	width: 98%;
+}
+#signup-form .small-spam{
+	font-size: 10px;
 }

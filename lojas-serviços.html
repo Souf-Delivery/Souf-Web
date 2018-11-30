@@ -20,29 +20,33 @@ index.html
 Scenario
 --> 
 <body>
-    <header>    
-        <nav>
-            <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
-            <div id="div-logo-right-side">
-                <div id="div-login"><p><a href="registro.html">Registrar</a> <a href="login.html">Login</a></p></div>
-                <div id=header_social>
-                    <ul>
-                        <li><a  class="fa fa-facebook" href="" target="_blank"></a></li>
-                        <li><a class="fa fa-twitter" href="" target="_blank"></a></li>
-                        <li><a class="fa fa-instagram" href="" target="_blank"></a></li>
-                    </ul>
-                </div><!-- End header_social -->
+    <header>
+        <div id="header-top">
+            <div id="header-phone-email">
+                <a id="header-phone"  class="fa fa-phone-square"><span id="header-phone-text"><span class="span-font">+244 998 808090</span></span> </a>
+                <a id="header-email" class="fa fa-envelope-square" href="" target="_blank"><span id="header-email-text"><span class="span-font">souf.delivery@gmail.com</span></span></a>
+            </div>
+            <div id="div-header-login">
+                <a class="fa fa-user" href="login.html"><span class="span-font"> Login </span></a><span> | </span><a href="registro.html">Registrar</a>
+            </div>
+            <div id="header-redes">
+                <a  class="fa fa-facebook" href="" target="_blank"></a>
+                <a class="fa fa-instagram" href="" target="_blank"></a>
             </div>
             
-        </nav>
-        <div id="div-ul">
-                <ul class="ul" id="nav-left">
-                    <li><a href="index.html">Casa</a></li>
-                    <li><a href="lojas-serviços.html">Lojas & serviços</a></li>
-                    <li><a href="contactos.html">Contactos</a></li>
-                    <li><a href="quem-somos.html">Quem somos</a></li>
-                </ul>
         </div>
+        <nav>
+            <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
+            <div id="menu">
+                <ul class="ul" id="nav-left">
+                    <a href="index.html"><li><span class="fa fa-home"></span> Casa</li></a>
+                    <a id="ativa" href="lojas-serviços.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
+                    <a href="contactos.html"><li><span class="fa fa-at"></span> Contactos</li></a>
+                    <a href="quem-somos.html"><li><span class="fa fa-users" ></span> Quem somos</li></a>
+                </ul>
+            </div> 
+        </nav>
+        
     </header>
     <div id="wrapper">
         <h2>O Porque optar pelos nossos serviços</h2>

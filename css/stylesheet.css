@@ -17,6 +17,13 @@ body h2{
     font-family: Cursive;
     font-size: 35px;
 }
+body h4{
+    color: #143E69;
+    font-family: Cursive;
+    font-size: 20px;
+    font-weight: 800;
+    padding-bottom: 1.5%;
+}
 /* Header starts here*/
 header{
     background-color: #FDFFFE;
@@ -28,17 +35,12 @@ header a{
     color:#000;
 }
 
-header #hr-nav{
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    border:0.5px solid #598AB1;
-  
-}
 #header-top{
     font-size: 12px;
     padding: 5px;
     text-decoration: none;
+    border-bottom:1px solid #ccc;
+    overflow: auto;
 }
 #header-phone-email{
     float: left;
@@ -211,6 +213,8 @@ nav #menu ul{
     margin: 0 auto;
     overflow: auto;
     background-color: #fff;
+    font-size:14px;
+    padding-bottom: 10px;
 }
 #wrapper h2{
     font-size: 30px;
@@ -236,15 +240,42 @@ nav #menu ul{
 }
 
 /*---------------- Quem somos -----------------*/
-#mvv{
-    width: 100%;
-    overflow: auto;;
-}
-#missao, #visao, #valores, #nossos-clientes, #nossos-parceiros, #nossos-objectivos{
-    width: 30%;
+
+#aside-quem-somos{
+    width: 50%;
+    overflow: auto;
     float: left;
-    padding: 10px;
-    border: 1px solid red;
+    margin:0 0 0 3%;
+}
+#aside-quem-somos ul, #mvv ul{
+    list-style-position: inside;
+}
+
+#nossos-clientes, #nossos-parceiros, #nossos-objectivos{
+    width: 90%;
+    float: left; 
+    margin: 0 0 3% 0;
+    text-align: justify;
+    padding: 2% 2% 0 5%;
+    overflow: auto;
+    
+}
+#mvv{
+    width: 44%;
+    overflow: auto;
+    float: right;
+    margin:0 20px 0 0;
+    overflow: auto;
+    padding-top: 5px;
+}
+#missao, #visao, #valores{
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: justify;
+    padding: 15px 15px 15px 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    overflow: auto;
 }
 /*#nossos-objectivos{
 

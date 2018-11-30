@@ -20,57 +20,38 @@ index.html
 Scenario
 --> 
 <body>
-    <header>    
-        <nav>
-            <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
-            <div id="div-logo-right-side">
-                <div id="div-login"><p><a href="registro.html">Registrar</a> <a href="login.html">Login</a></p></div>
-                <div id=header_social>
-                    <ul>
-                        <li><a  class="fa fa-facebook" href="" target="_blank"></a></li>
-                        <li><a class="fa fa-twitter" href="" target="_blank"></a></li>
-                        <li><a class="fa fa-instagram" href="" target="_blank"></a></li>
-                    </ul>
-                </div><!-- End header_social -->
+    <header>
+        <div id="header-top">
+            <div id="header-phone-email">
+                <a id="header-phone"  class="fa fa-phone-square"><span id="header-phone-text"><span class="span-font">+244 998 808090</span></span> </a>
+                <a id="header-email" class="fa fa-envelope-square" href="" target="_blank"><span id="header-email-text"><span class="span-font">souf.delivery@gmail.com</span></span></a>
+            </div>
+            <div id="div-header-login">
+                <a class="fa fa-user" href="login.html"><span class="span-font"> Login </span></a><span> | </span><a href="registro.html">Registrar</a>
+            </div>
+            <div id="header-redes">
+                <a  class="fa fa-facebook" href="" target="_blank"></a>
+                <a class="fa fa-instagram" href="" target="_blank"></a>
             </div>
             
-        </nav>
-        <div id="div-ul">
-                <ul class="ul" id="nav-left">
-                    <li><a href="index.html">Casa</a></li>
-                    <li><a href="lojas-serviços.html">Lojas & serviços</a></li>
-                    <li><a href="contactos.html">Contactos</a></li>
-                    <li><a href="quem-somos.html">Quem somos</a></li>
-                </ul>
         </div>
+        <nav>
+            <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
+            <div id="menu">
+                <ul class="ul" id="nav-left">
+                    <a href="index.html"><li><span class="fa fa-home"></span> Casa</li></a>
+                    <a href="lojas-serviços.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
+                    <a href="contactos.html"><li><span class="fa fa-at"></span> Contactos</li></a>
+                    <a id="ativa" href="quem-somos.html"><li><span class="fa fa-users" ></span> Quem somos</li></a>
+                </ul>
+            </div> 
+        </nav>
+        
     </header>
     <div id="wrapper">
         <h2>Quem somos</h2>
         <p class="p-quem-somos">A Soud Delivery é uma empresa angolana que presta serviços de entregas rápidas e com qualidade, num ambiente de mercado amplo e que necessita de soluções ao problema actual de falta de capacidade de respostas eficiente das mercadorias. Nós facilitamos o fluxo de compras.</p>
-        <div id="mvv">
-            <div id="missao">
-                <h4>Missão</h4>
-                <p>A Souf Delivery tem como missão facilitar o fluxo de compras a nível nacional no sector de buscas e entregas, contribuir para o sucesso dos nossos clientes e superar a expectativas, desenvolvendo soluções inovadoras gerando valor sustentável a todos.</p>
-            </div>
-            <div id="visao">
-                <h4>Visão</h4>
-                <p>A Souf Delivery visa dar tudo aos clientes sem o mesmo ter de se deslocar. Dominar o mercado de entrega e estender clientes de diferentes regiões do território nacional</p>
-                
-            </div>
-            <div id="valores">
-                <h4>Valores</h4>
-                <ul>
-                    <li>Ética nos negócios</li>
-                    <li>Lucratividade em nossas actividades</li>
-                    <li>Dinamismo em nosso atendimento</li>
-                    <li>Valorização das pessoas que fazem nossa empresa crescer</li>
-                    <li>Inovação em nossas práticas</li>
-                    <li>Responsabilidade com os nossos clientes, colaboradores e com a sociedade</li>
-                    <li>Compromisso com clientes, colaboradores e fornecedores.</li>
-                </ul>
-                
-            </div>
-        </div>
+        <aside id="aside-quem-somos">
         <div id="nossos-objectivos">
             <h4>Nossos objectivos</h4>
             <ul>
@@ -103,6 +84,31 @@ Scenario
                 <li>Empresas de organização de Eventos</li>
                 <li>Comercio Geral</li>
             </ul>  
+        </div>
+        </aside>
+        <div id="mvv">
+            <div id="missao">
+                <h4>Missão</h4>
+                <p>A Souf Delivery tem como missão facilitar o fluxo de compras a nível nacional no sector de buscas e entregas, contribuir para o sucesso dos nossos clientes e superar a expectativas, desenvolvendo soluções inovadoras gerando valor sustentável a todos.</p>
+            </div>
+            <div id="visao">
+                <h4>Visão</h4>
+                <p>A Souf Delivery visa dar tudo aos clientes sem o mesmo ter de se deslocar. Dominar o mercado de entrega e estender clientes de diferentes regiões do território nacional</p>
+                
+            </div>
+            <div id="valores">
+                <h4>Valores</h4>
+                <ul>
+                    <li>Ética nos negócios</li>
+                    <li>Lucratividade em nossas actividades</li>
+                    <li>Dinamismo em nosso atendimento</li>
+                    <li>Valorização das pessoas que fazem nossa empresa crescer</li>
+                    <li>Inovação em nossas práticas</li>
+                    <li>Responsabilidade com os nossos clientes, colaboradores e com a sociedade</li>
+                    <li>Compromisso com clientes, colaboradores e fornecedores.</li>
+                </ul>
+                
+            </div>
         </div>
        
         

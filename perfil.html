@@ -2,8 +2,9 @@
 <!DOCTYPE html>
 <html>    
 <head>
-    <meta charset="utf-8">
-    <title>Login | Souf Delivery</title>
+    <meta http-equiv="content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Souf Delivery - Home</title>
     <meta name="keywords" content="Souf Delivery, Souf">
     <meta name="description" content="A Souf delivery presta serviço de entregas rápidas e com qualidade, num ambiente de mercado amplo e que necessita de soluções ao problema actual de falta de capacidade de resposta eficiente na entrega das mercadorias. Nos facilitamos o fluxo de compras.">
     <link rel="stylesheet" href="css/stylesheet.css">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="icons/css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
   <script src="jquery.slides.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
 
@@ -23,16 +25,15 @@ Date  : 12/11/2018
 index.html 
 Scenario
 -->
-<body onload="main()">
+<body onload="start()">
     <header>
         <div id="header-top">
             <div id="header-phone-email">
-                <a id="header-phone"  class="fa fa-phone-square"><span id="header-phone-text">+244 998 808090</span> </a>
-                <a id="header-email" class="fa fa-envelope-square" href="" target="_blank"><span id="header-email-text">souf.delivery@gmail.com</span></a>
+                <a id="header-phone"  class="fa fa-phone-square"><span id="header-phone-text"><span class="span-font">+244 998 808090</span></span> </a>
+                <a id="header-email" class="fa fa-envelope-square" href="" target="_blank"><span id="header-email-text"><span class="span-font">souf.delivery@gmail.com</span></span></a>
             </div>
             <div id="div-header-login">
-                <a class="fa fa-user" href="login.html"> Login </a><span> | </span>
-                <a href="registro.html">Registrar</a>
+                <a class="fa fa-user" href="login.html"><span class="span-font"> Login </span></a><a href="login.html">Terminar sessão </a><span> | </span><a href="registro.html">Registrar</a>
             </div>
             <div id="header-redes">
                 <a  class="fa fa-facebook" href="" target="_blank"></a>
@@ -40,8 +41,6 @@ Scenario
             </div>
             
         </div>
-        <hr id="hr-nav" />   
-        
         <nav>
             <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
             <div id="menu">
@@ -50,30 +49,66 @@ Scenario
                     <a href="lojas-serviços.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
                     <a href="contactos.html"><li><span class="fa fa-at"></span> Contactos</li></a>
                     <a href="quem-somos.html"><li><span class="fa fa-users" ></span> Quem somos</li></a>
+                    <a href="blog.html"><li><span class="fa fa-users" ></span> Blog</li></a>
                 </ul>
             </div> 
         </nav>
         
-    </header>
-    
+    </header><!-- End Header -->
     <div id="wrapper">
-        <div id="login-div">
-            <h2 id="h2">Entre na sua conta</h2>
-            <p>ou <a href="registro.html" target="_blank">registre-se</a> agora!</p>
-                <form id="login_form" action="php/login.php">
-                    <p> 
-                    <label class="label">Nome do usuário(ou email)</label>
-                    <input class="input" type="text" id="usuario" name="usuario"><span id="usertick" style="display:none"> &#10003; </span> <span id="usercross" style="display:none"> &#10007; </span>
+        <div id="perfil-aside">
+            <div id="perfil-imagem">
+                <img src="imagens/foto-perfil.png" alt="foto do perfil" />
+            </div>
+            <a href="£"><p class="perfil-p">Trocar foto de perfil</p></a>
+            <a href="£"><p>Trocar endereço</p></a>
+            <a href="£"><p>Trocar senha</p></a>
+            <a href="£"><p>Privacidade e termos</p></a>
+            
+        </div>
+        <div id="perfil-content">
+            <h3>Minha Conta</h3>
+            <p class="p-italico">"Para alterar o seu nome, email e telefone, simplesmente digite nos campos abaixo e quando terminar, clique em "Salvar" ou "Cancelar" para repor os dados anteriores".</p>
+            <form id="perfil-form">
+                <br /><hr />
+                <p class="clear"> 
+                <label class="label">Nome: </label>
+                <input class="input" type="text" id="name" name="name">
+                </p>
+                <p class="clear">
+                    <label class="fa fa-envelope-square"> Email: </label>
+                    <input class="input" type="text" id="password" name="email">
+                 </p>
+                  <p class="clear">
+                    <label class="fa fa-phone-square"> Telefone: </label>
+                    <input class="input" type="number" id="telefone" name="telefone">
+                </p>
+                <p class="clear">
+                    <input class="submit" type="button" value="Cancelar">
+                    <input class="submit" type="button" value="Salvar">
+                    </p>
+                <br /><hr />
+                <p class="clear">
+                    <label class="label" for="month-select">Data de Nascimento:</label>
+                    <label class="input" id="perfil-dob">Data...</label>
                     </p>
                     <p class="clear">
-                    <label class="label">Senha</label>
-                    <input class="input" type="password" id="senha" name="senha"><span id="passtick" style="display:none"> &#10003; </span> <span id="passcross" style="display:none"> &#10007; </span>
+                    <label class="label">Endereço:</label>
+                    <textarea class="input" id="perfil-endereço">Numero da casa/ Nome da rua, Bairro...</textarea>
                     </p>
-                    <input class="submit" type="submit" value="Entrar">
-                </form>
-            </div><!-- End div form -->
-            <p id="p-senha">Esqueceu a senha?<a href=""> Recuperar</a></p>
-        
+            </form>
+
+
+
+
+
+
+
+
+            
+        </div>
+    
+
     </div><!-- End Wrapper -->
     <footer>
         <div id="footer-wrapper">
@@ -88,7 +123,7 @@ Scenario
             <div id="footer-local">
                 <h6>Localização</h6>
                 <p>Benfica Estrada no 100, Rua do Por-do-Sol, Casa no 166, Luanda-Angola</p>
-                <br><p><a href="">Ver no mapa</a></p>
+                <br><p><a href="contactos.html#mapa">Ver no mapa</a></p>
             </div> 
         
             <div id="footer-outros">

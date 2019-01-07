@@ -2,18 +2,65 @@
 <!DOCTYPE html>
 <html>    
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Souf Delivery - Home</title>
     <meta name="keywords" content="Souf Delivery, Souf">
     <meta name="description" content="A Souf delivery presta serviço de entregas rápidas e com qualidade, num ambiente de mercado amplo e que necessita de soluções ao problema actual de falta de capacidade de resposta eficiente na entrega das mercadorias. Nos facilitamos o fluxo de compras.">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/styles-pages.css">
     <link rel="stylesheet" href="icons/css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
   <script src="jquery.slides.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
 
     <link rel="icon" href="imagens/favicon.png">
+
+    <script type="text/javascript">
+        var slideIndex = 1;
+        var slide;
+        function start(){
+          showImage(slideIndex);   
+        }
+         
+        function showImage(n){
+
+            if(document.getElementByClassName){
+                slide = document.getElementsByClassName("slides");
+                alert("true");
+            }
+            else{
+                var elArray = [];
+                var tmp = document.getElementsByTagName("slide");  
+                var regex = new RegExp("(^|\\s)" + "slides"+ "(\\s|$)");
+                for ( var i = 0; i < tmp.length; i++ ) {
+
+                    if ( regex.test(tmp[i].slides) ) {
+                        elArray.push(tmp[i]);
+                    }
+                }
+                slide = elArray;
+                //alert("slide[1]");
+            }
+            /*var  
+            
+            
+            if(n > 2){
+                slideIndex = 1;
+            };
+            if(n < 1){
+                slideIndex = 2;
+            };*/
+            for (var i = 0; i < 2; i++) {
+                //slide[i].style.display = "none";
+            }
+            
+            //slide[slideIndex-1].style.display = "inline-block";
+
+        }
+    </script>
 </head>
 <!-- 
 Author: Tiago Afonso Kayaya
@@ -22,7 +69,7 @@ Date  : 12/11/2018
 index.html 
 Scenario
 -->
-<body onload="main()">
+<body onload="start()">
     <header>
         <div id="header-top">
             <div id="header-phone-email">
@@ -30,7 +77,7 @@ Scenario
                 <a id="header-email" class="fa fa-envelope-square" href="" target="_blank"><span id="header-email-text"><span class="span-font">souf.delivery@gmail.com</span></span></a>
             </div>
             <div id="div-header-login">
-                <a class="fa fa-user" href="login.html"><span class="span-font"> Login </span></a><span> | </span><a href="registro.html">Registrar</a>
+                <a class="fa fa-user" href="login.html"><span class="span-font"> Login </span></a><a href="login.html">Terminar sessão </a><span> | </span><a href="registro.html">Registrar</a>
             </div>
             <div id="header-redes">
                 <a  class="fa fa-facebook" href="" target="_blank"></a>
@@ -46,41 +93,147 @@ Scenario
                     <a href="lojas-serviços.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
                     <a href="contactos.html"><li><span class="fa fa-at"></span> Contactos</li></a>
                     <a href="quem-somos.html"><li><span class="fa fa-users" ></span> Quem somos</li></a>
+                    <a href="blog.html"><li><span class="fa fa-users" ></span> Blog</li></a>
                 </ul>
             </div> 
         </nav>
         
     </header>
-    <div id="wrapper">
-        <div id="div-slideshow">
+    <div id="div-slideshow">
             <img src="imagens/2.jpg" id="slideshow" alt="imagesslideshow">
+            <p><i id="slide-left-button" class="fa fa-chevron-circle-left"></i><i id="slide-right-button" class="fa fa-chevron-circle-right"></i></p>
         </div>
+
+        <div id="slideshow-container">
+            <div style="display: block;" id="sliding" class="slides fade">
+                <div class="number">1 / 2</div>
+                <div><img src="imagens/1.jpg" id="slideshow" alt="imagesslideshow"></div>
+                <div class="text">Caption 1</div>
+            </div>
+            <div class="slides">
+                <div class="number">2 / 2</div>
+                <div><img src="imagens/2.jpg" id="slideshow" alt="imagesslideshow"></div>
+                <div class="text">Caption 2</div>
+            </div>
+
+            <a href="">
+                <i id="prev" class="fa fa-chevron-circle-left"></i>
+            </a>
+            <a href="">
+                <i id="next" class="fa fa-chevron-circle-right"></i>
+            </a>
+
+        </div>
+        <br />
+
+        <div id="div-pontos">
+            <span class="pontos"></span>
+            <span class="pontos"></span>
+        </div>
+
+
+
+        <p id="content-p">Prestamos serviços de entrega rápidas, com qualidade e facilitamos o fluxo de compras.</p>
+        <div id="pacote-div">
+            <h3 id="home-h3">Envie o seu pacote comnosco</h3>
+            <p>Faça ja o envio do seu pacote ou selecione um produto nas nossas lojas</p>
+            <input class="button-encomendar" type="button" name="go" value="Encomendar">
+            <a href="lojas-serviços.html#lojas"><input class="button-encomendar" type="button" name="go" value="Ir para lojas"></a>
+        </div>
+    <div id="wrapper">
+    <div id="blog">
+        <h3>Blog</h3>
+        <img src="imagens/blog.jpg" id="slideshow" alt="Blog">
+        <p>Acompanhe as nossas Souf Delivery no nosso blog e aproveite para deixar a sua opinião ou contributo para ajudar na melhoria dos nossos serviços.</p>
         
-        <p>"Prestamos serviços de entrega rápidas e com qualidade e facilitamos o fluxo de compras".</p>
-        <div id="feed">
-            <h3>Feed e noticias Recentes</h3>
-            <p>Left</p>
-        </div>
+    </div>
+    <div id="preçario">
+        <h3>Preços </h3>
+        <img src="imagens/blog.jpg" id="slideshow" alt="Blog">
+        <p>Acompanhe as nossas Souf Delivery no nosso blog e aproveite para deixar a sua opinião ou contributo para ajudar na melhoria dos nossos serviços.</p>
+        
+    </div>
         <div id="variedades">
+            <div id="price-div">
+                <h3>Consulte o preço dos nossos serviços</h3>
+            </div>
             <div id="encomenda-info">
-                <h4>Como fazer uma encomenda</h4>
-                <h5>Particular</h5>
-                <ul>
-                    <li>Selecione a loja</li>
-                    <li>Selecione o produto nas nossa galeria de produtos</li>
-                    <li>Insira a quantidade dos mesmos</li>
-                    <li>Adicione detalhes do endereço para a entrega do produto</li>
-                    <li>Selecione o método de pagamento</li>
-                    <li>Assinar factura (Optional)</li>
+                <h4>Como enviar o seu pacote pela Souf Delivery</h4>
+                <div class="encomendas">
+                <h5>Encomendar produto de uma loja</h5>
+                <ul class="passos-barra">
+                    <li>
+                        <p>
+                        <span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">1</strong></span>
+                        <span class="passos-texto"> Selecione a loja</span>
+                        </p>
+                        <div class="vertical-dash"></div>
+                    </li>
+
+                    <li> 
+                        <p><span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">2</strong></span>
+                       <span class="passos-texto">Selecione o produto nas nossa galeria de produtos</span></p>
+                       <div class="vertical-dash"></div> 
+                    </li>
+                    <li>
+                        <p><span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">3</strong></span>
+                        <span class="passos-texto">Insira a quantidade dos mesmos</span></p>
+                        <div class="vertical-dash"></div>
+                    </li>
+                    <li>
+                        <p>
+                        <span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">4</strong></span>
+                        <span class="passos-texto">Adicione detalhes do endereço para a entrega do produto</span></p>
+                        <div class="vertical-dash"></div>
+                    </li>
+                    <li>
+                        <p>
+                        <span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">5</strong></span>
+                        <span class="passos-texto">Selecione o método de pagamento</span></p>
+                        <div class="vertical-dash"></div>
+                    </li>
+                    <li>
+                        <p>
+                        <span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">6</strong></span>
+                        <span class="passos-texto">Assinar factura (Optional)</span></p>
+                        
+                    </li>
                 </ul>
-                <h5>Empresa</h5>
-                <ul>
-                    <li>Descreve os produtos e suas quantidades</li>
-                    <li>Adicione detalhes do endereço para a coleção e entrega do produto</li>
-                    <li>Selecione o método de pagamento</li>
-                    <li>Assinar factura (Optional)</li>
+                </div>
+                <div class="encomendas">
+                <h5>Empresa ou particulares</h5>
+                <ul class="passos-barra">
+                    <li>
+                        <p>
+                        <span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">1</strong></span>
+                        <span class="passos-texto"> Descreve os produtos e suas quantidades</span>
+                        </p>
+                        <div class="vertical-dash"></div>
+                    </li>
+
+                    <li> 
+                        <p><span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">2</strong></span>
+                       <span class="passos-texto">Adicione detalhes do endereço para a coleção</span></p>
+                       <div class="vertical-dash"></div> 
+                    </li>
+                    <li> 
+                        <p><span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">3</strong></span>
+                       <span class="passos-texto">Adicione detalhes do endereço para a entrega do produto</span></p>
+                       <div class="vertical-dash"></div> 
+                    </li>
+                    <li>
+                        <p><span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">4</strong></span>
+                        <span class="passos-texto">Selecione o método de pagamento</span></p>
+                        <div class="vertical-dash"></div>
+                    </li>
+                    <li>
+                        <p>
+                        <span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">5</strong></span>
+                        <span class="passos-texto">Assinar factura (Optional)</span></p>
+                    </li>
 
                 </ul>
+            </div>
             </div>
             <div id="produtos">
                 <h4>Novos Produtos</h4>

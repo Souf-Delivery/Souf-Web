@@ -4,10 +4,10 @@
 }
 body{
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    /*background-image: url("../imagens/background12.jpg");
+    background-image: url("../imagens/background11.png");
     background-size:cover;
-    background-repeat: no-repeat;*/
-    background-color: #f2f2f2;
+    background-repeat: no-repeat;
+    /*background-color: #f2f2f2;*/
 }
 body a{
     text-decoration: none;
@@ -226,17 +226,100 @@ nav #menu ul{
     width: 100%;
     height: 400px;
 }
-
+/* -------     FEED     ----*/
 #wrapper #feed{
-    width: 60%;
+    width: 57%;
     float: left;
-    border: 1px solid red;
+    overflow: auto;
+    margin: 1% 0 1% 3%;
+}
+#feed h3{
+    padding: 2% 5% 2% 5%;
+    background-color: #B4DCE9;
+}
+#pacote-div{
+    border:1px solid red;
+    width: 100%;
+    padding: 4% 5% 5% 15%;
+    overflow: auto;
+}
+#home-h3{
+    font-family: Cursive;
+    font-size: 20px;
+    padding: 2% 5% 0 0;
+    background-color: transparent;
+}
+#pacote-div p{
+    font-size: 13px;
+    text-align: left;
+}
+#pacote-div #local-encomenda-select{
+    width: 100%;
+    border:1px solid red;
+    overflow: auto;
+}
+#pacote-div .button-encomendar{
+    float: left;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 20px 5px 0;
+    border:1px solid #333;
+    background-color: #143E69;
+    color: #fff;
+}
+#feed-news-div{
+    width: 100%;
+    border-bottom:1px solid #598AB1;
+    padding: 3% 0 3% 0;
+    float: left;
+    overflow: auto;
+}
+#feed-news-div #feed-img{
+    width: 40%;
+    height: 150px;
+    float: left;
+}
+#feed-news-div #feed-text{
+    width: 57%;
+    float: right;
+    padding: 2.5% 0 2.5% 2.5%;
 
 }
+
+#feed-text #feed-titulo{
+    font-size: 13px;
+}
+#feed-text #feed-paragrafo{
+    font-size: 18px;
+    padding: 5px 0 5px 0;
+}
+
+#feed-text #feed-data, #feed-text #feed-hora{
+    font-size: 10px;
+    color: #333;
+
+}
+#wrapper #price-div{
+    width: 100%;
+
+}
+#price-div h3{
+    padding: 2% 5% 2% 0;
+    background-color: transparent;
+}
 #wrapper #variedades{
-    width: 39%;
+    width: 36%;
     float: right;
-    border: 1px solid red;
+    border:1px solid #ccc;
+    overflow: auto;
+    margin: 1% 2% 1% 1%;
+}
+#variedades h4{
+    margin: 5% 5% 5% 5%;
+    padding: 5px 5px 5px 5px;
+}
+/* ---------- Quem somos -------------*/
+#wrapper .p-quem-somos{
+    padding: 5px 30px 30px 30px;
 }
 
 /*---------------- Quem somos -----------------*/
@@ -277,12 +360,6 @@ nav #menu ul{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
     overflow: auto;
 }
-/*#nossos-objectivos{
-
-}
-#nossos-clientes, #nossos-parceiros{
-    width: 50%;
-}*/
 
 /* ------- Slideshow ----------------*/
 #slideshow_{
@@ -291,10 +368,208 @@ nav #menu ul{
     overflow:hidden;
 }
 #slideshow_ img{
+    z-index: 0;
     width: 100%;
     height: 100%;
 }
+#content-p{
+    background-color: #143E69;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 
+}
+
+#slide-left-button, #slide-right-button{
+    
+    color: #000;
+    font-size: 30px;
+    z-index: 1;
+    margin-top:  -200px;
+
+    
+}
+
+#slide-left-button{
+    position: absolute;
+    display: block;
+    float: left;
+    margin-left:  5%;
+}
+#slide-right-button{
+    position: absolute;
+    display: block;
+    float: right;
+    margin-left:  95%;
+}
+
+#slideshow-container{
+    width: 800px;
+    position: relative;
+    margin: auto;
+
+}
+.slides{
+    display: none;
+    /*width: 350px
+    height:200px;
+    position: relative;
+    overflow: auto;*/
+}
+/*.slides img{
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    opacity: 1;
+    transition: 1s;
+}*/
+/*.active{
+    opacity: 1;
+}*/
+.number{
+    position: absolute;
+    padding: 8px 12px;
+    color:#f2f2f2;
+}
+.text{
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    width: 100%;
+    padding: 8px 16px;
+    bottom: 8px;
+    color: #f2f2f2;
+    font-weight: bold;
+}
+#prev, #next{
+    top:50%;
+    position: absolute;
+    color: #f2f2f2;
+    font-weight: bold;
+    padding: 10px 10px;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+#prev:hover, #next:hover{
+    font-size: 20px;
+
+}
+#next{
+    border-radius: 0 3px 3px 0;
+    right: 0;
+}
+
+#div-pontos{
+    text-align: center;
+}
+.pontos{
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    background: gray;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+€keyframes fade{
+    from{opacity: 0.4}
+    to{opacity: 1}
+}
+/* ---------------- Lojas & serviços -----------------*/
+#content-ls{
+    background-color: #143E69;
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+#conteudo{
+    width: 100%;
+    float: left;
+    overflow: auto;
+
+
+}
+#conteudo #lojas{
+    background-color:  #143E69;/*#4C45E1;*/
+    background-image: linear-gradient(to bottom right,  #143E69 20%, #B4DCE9,  #143E69);
+    overflow: auto;
+    padding-bottom: 20px;
+
+}
+#conteudo #lojas h4{
+    margin: 10px 10px 0 10px;
+    color: #fff;
+
+}
+#lojas .loja{
+    width: 22%;
+    float: left;
+    margin: 1% 1% 1% 1.8%;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    overflow: auto;
+}
+.loja h5{
+    margin: 5px 5px 0 10px;
+    font-size: 13px;
+}
+.loja p{
+    margin: 0 5px 10px 10px;
+    font-size: 11px;
+    color: #333;
+}
+#aside-lojas-serviços{
+    width: 30%;
+    float: right;
+    margin: 10px;
+
+}
+#aside-lojas-serviços #prioridades{
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: transparent;
+    text-align: justify;
+    padding: 15px 15px 15px 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    overflow: auto;
+}
+#aside-lojas-serviços #prioridades ul{
+    list-style-position: inside;;
+}
+#clientes-alvos{
+    width: 100%;
+    margin-left: 2%;
+    overflow: auto;
+}
+#clientes-alvos .loja{
+    width: 15%;
+    float: left;
+    margin: 2%;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    overflow: auto;
+}
+.loja h5{
+    margin: 5px 5px 0 10px;
+    font-size: 13px;
+}
+.loja p{
+    margin: 0 5px 10px 10px;
+    font-size: 11px;
+    color: #333;
+}
 /*---------------- Contact Page -----------------*/
 
 #formNaside{
@@ -430,11 +705,92 @@ p{
     width: 100%;
     height: 100%;
 }
-/* ---------- Quem somos -------------*/
-#wrapper .p-quem-somos{
-    padding: 5px 30px 30px 30px;
+
+/* ---- Perfil -----------------*/
+#perfil-aside{
+    width: 30%;
+    float: left;
+    margin: 0 1% 0 0;
+    overflow: auto;
+}
+#perfil-aside #perfil-imagem{
+    width: 70%;
+    height: 170px;
+    border: 1px solid #e6f2ff;
+    border-radius: 50%;
+    margin: 5% auto;
+    overflow: auto;
+}
+#perfil-img img{
+    width: 100%;
+    height: 100%;
+}
+#perfil-aside p{
+    width: 70%;
+    background-color: #4D89B8;
+    margin: 5px auto;
+    padding: 2% 0 2% 5%;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 13px;
+}
+#perfil-aside p:hover{
+    background-color: #143E69;
+}
+#perfil-content{
+    width: 65%;
+    float: left;
+    margin: 0 0 0 1%;
 }
 
+#perfil-content h3{
+    font-family: cursive;
+    font-size: 30px;
+    margin: 5px 0 5px 0;
+    padding: 5px;
+    color: #143E69;
+    background-color: transparent;
+  
+}
+.p-italico{
+    font-style: italic;
+}
+#perfil-content p{
+    margin: 10px 0 0 0;
+    font-size: 13px;
+
+}
+#perfil-content .input{
+    width: 50%;
+    float: right;
+    margin: 0 0 0 0;
+    padding: 2px 0 2px 5px;
+    background-color: #f8f8f8;
+}
+#perfil-content .submit{
+    width:24%;
+    margin:1%;
+    border:1px solid #ccc;
+    padding:6px 3px 6px 3px;
+    border-radius:2px;
+    -ms-border-radius:2px;
+    -webkit-border-radius:2px;
+    margin-bottom:20px;
+    float: right;
+}
+#perfil-content .submit:hover{
+    color:#FFF;
+    background-color: #143E69;
+    border-radius:5px;
+    -ms-border-radius:5px;
+    -webkit-border-radius:5px;
+    border:1px solid green;
+}
+#perfil-content textarea{
+    border:1px solid #e6f2ff;
+    height: 100px;
+    padding: 1px 1px;
+}
 
 
 /* ------ Footer ------*/

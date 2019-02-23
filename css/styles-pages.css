@@ -172,6 +172,65 @@
 
 }
 
+/*------------- Video ----------------*/
+#fade {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.95;/*0.8*/
+  opacity: .95;
+  filter: alpha(opacity=95);
+}
+
+#light {
+  display: none;
+  top: 0;
+  left: 35%;
+  position: absolute;
+  margin: 0 auto;
+  max-width: 352px;
+  max-height: 640px;
+  border: 2px solid #fff;
+  background: #FFF;
+  z-index: 1002;
+  overflow: auto;
+}
+
+#boxclose {
+  float: right;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #AEAEAE;
+  border-radius: 3px;
+  background: #222222;
+  font-size: 31px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 0px;
+  padding: 11px 3px;
+  position: absolute;
+  font-size: 13px;
+  right: 2px;
+  top: 2px;
+  z-index: 1002;
+  opacity: 0.9;
+}
+
+.boxclose:before {
+	text-align: center;
+  content: "x";
+}
+
+#fade:hover ~ #boxclose {
+  display:none;
+}
+------------------
+
 
 
 

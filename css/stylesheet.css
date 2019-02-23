@@ -4,10 +4,10 @@
 }
 body{
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    background-image: url("../imagens/background11.png");
+    /*background-image: url("../imagens/background1.jpg");*/
     background-size:cover;
     background-repeat: no-repeat;
-    /*background-color: #f2f2f2;*/
+    background-color: #f2f2f2;
 }
 body a{
     text-decoration: none;
@@ -28,8 +28,7 @@ body h4{
 header{
     background-color: #FDFFFE;
     color: #000;
-    border-bottom: 5px solid #133C76;
-    margin-bottom: 5px;
+    border-bottom: 5px solid #598AB1;
 }
 header a{
     color:#000;
@@ -39,7 +38,9 @@ header a{
     font-size: 12px;
     padding: 5px;
     text-decoration: none;
-    border-bottom:1px solid #ccc;
+    /*border-bottom:1px solid #ccc;*/
+    /*background-color: #e6f7ff;*/
+    background-image: linear-gradient(to top, #FDFFFE, #e6f7ff);
     overflow: auto;
 }
 #header-phone-email{
@@ -48,20 +49,24 @@ header a{
 #header-phone, #header-email{
     font-size: 12px;
     margin: 0 5px 0 5px;
-    color: #4D89B8;
+    color: #000;
+    /*color: #4D89B8;*/
     
 }
 #header-email-text, #header-phone-text{
-   color: #133C76;
+    color: #000;
+   /*color: #133C76;*/
    padding: 0 5px 0 5px;
 }
 #header-redes{
     float: right;
     font-size: 14px;
     margin-right: 10px;
+
 }
 #header-redes a{
     margin-right: 5px;
+    color: #000;
 }
 #header-phone-email #header-email:hover{
     color: #133C76;
@@ -74,7 +79,8 @@ float: right;
 margin: 0 5px 2px 5px;
 }
 #div-header-login a{
-    color: #133C76;
+    color: #000;
+    /*color: #133C76;*/
 }
 .span-font{
     font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -84,7 +90,7 @@ margin: 0 5px 2px 5px;
     text-decoration: underline;
 }
 nav{
-	width: 70%;
+	width: 1190px;
 	margin: 0 auto;
     padding-top: 10px;
     overflow: auto;
@@ -95,10 +101,70 @@ nav{
     margin-left: 6px;
     overflow: auto;
 }
-img{
+#div-logo img{
     width: 100%;
     height: 100%;
 }
+/* 
+NAV PHONE 
+---------------*/
+nav #menu-phone{
+    width: 100%;
+    display:none;
+        box-sizing: border-box;
+        box-sizing: content-box;
+        
+        float: left;
+        background-color: #4D89B8;
+        font-size: 1.6em;
+        color: #fff;
+        height: 30px;
+        overflow: auto;
+    overflow: auto;
+}
+nav #menu-phone ul{
+    width: 99%;
+    list-style: none;
+    position:absolute;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+nav #menu-phone ul li{
+    float: left;
+    margin-left: 5px;
+}
+nav #menu-phone ul li{
+    text-align: left;
+}
+nav #menu-phone ul li:hover ul{
+    display: block;
+}
+nav #menu-phone ul li ul{
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+    background-color: #4D89B8; 
+}
+
+nav #menu-phone ul li ul a li{
+    float: none;
+    color: #fff;
+    background-color: 
+    text-align: left;
+    border-bottom:2px solid #B4DCE9;
+    padding: 10px 5px 10px 5px;
+    border-radius: 0px 0px 0px 0px;
+
+}
+nav #menu-phone ul li ul a li:hover{
+    font-size: 15px;
+    background-color: #B4DCE9;
+    color: #000;
+}
+/*
+END NAV PHONE
+*/
 nav #menu{
     float: right;
     margin-top: 62px;
@@ -109,7 +175,7 @@ nav #menu ul li{
     margin: 0 5px 0 5px;
 }
 nav #ativa li{
-    background-color: #133C76;
+    background-color: #598AB1;
     border-radius: 10px 10px 0px 0px;
     
 }
@@ -117,7 +183,7 @@ nav #ativa{
    color: #FDFFFE; 
 }
 nav #menu ul li:hover{
-    background-color: #133C76;
+    background-color: #598AB1;
     border-radius: 10px 10px 0px 0px;
 }
 nav #menu ul a:hover{
@@ -209,12 +275,13 @@ nav #menu ul{
 
 /* ------------------ Body - wrapper ----------*/
 #wrapper{
-    width: 70%;
+    width: 1205px;/* 70%*/
     margin: 0 auto;
-    overflow: auto;
     background-color: #fff;
     font-size:14px;
     padding-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
 }
 #wrapper h2{
     font-size: 30px;
@@ -222,10 +289,7 @@ nav #menu ul{
     padding: 10px;
 
 }
-#div-slideshow{
-    width: 100%;
-    height: 400px;
-}
+
 /* -------     FEED     ----*/
 #wrapper #feed{
     width: 57%;
@@ -237,35 +301,7 @@ nav #menu ul{
     padding: 2% 5% 2% 5%;
     background-color: #B4DCE9;
 }
-#pacote-div{
-    border:1px solid red;
-    width: 100%;
-    padding: 4% 5% 5% 15%;
-    overflow: auto;
-}
-#home-h3{
-    font-family: Cursive;
-    font-size: 20px;
-    padding: 2% 5% 0 0;
-    background-color: transparent;
-}
-#pacote-div p{
-    font-size: 13px;
-    text-align: left;
-}
-#pacote-div #local-encomenda-select{
-    width: 100%;
-    border:1px solid red;
-    overflow: auto;
-}
-#pacote-div .button-encomendar{
-    float: left;
-    padding: 10px 10px 10px 10px;
-    margin: 5px 20px 5px 0;
-    border:1px solid #333;
-    background-color: #143E69;
-    color: #fff;
-}
+
 #feed-news-div{
     width: 100%;
     border-bottom:1px solid #598AB1;
@@ -306,17 +342,7 @@ nav #menu ul{
     padding: 2% 5% 2% 0;
     background-color: transparent;
 }
-#wrapper #variedades{
-    width: 36%;
-    float: right;
-    border:1px solid #ccc;
-    overflow: auto;
-    margin: 1% 2% 1% 1%;
-}
-#variedades h4{
-    margin: 5% 5% 5% 5%;
-    padding: 5px 5px 5px 5px;
-}
+
 /* ---------- Quem somos -------------*/
 #wrapper .p-quem-somos{
     padding: 5px 30px 30px 30px;
@@ -362,71 +388,101 @@ nav #menu ul{
 }
 
 /* ------- Slideshow ----------------*/
-#slideshow_{
+
+.slideshow-container{
     width: 100%;
-    height: 350px;
-    overflow:hidden;
+top: 0;
+bottom: 0;
+background-color: #B4DCE9;
+position: relative;
+margin:0 auto;
+overflow: auto;
+float: left;
+
 }
-#slideshow_ img{
-    z-index: 0;
+
+.myslides{
+width: 100%;
+height: 100%;
+display: none;
+overflow: auto; 
+
+}
+.myslides img{
+  width: 100%;
+  height: 100%;     
+}
+/*
+.numbers{
+position: absolute;
+top: 0;
+color: #f2f2f2;
+padding: 8px 12px;
+font-size: 12px;
+}
+*/
+.prev , .next{
+position: absolute;
+top: 50%;
+font-size: 18px;
+font-weight: bold;
+padding: 16px;
+margin-top: -22px;
+border-radius: 0 3px 3px 0;
+color: #fff;
+cursor: pointer;
+}
+
+.next{
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,.next:hover{
+
+background-color: rgba(0,0,0,0.8);
+
+}
+
+.caption{
+text-align: center;
+position: absolute;
+bottom: 8px;
+width: 100%;
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 22px;
+
+}
+#dots-div{
     width: 100%;
-    height: 100%;
-}
-#content-p{
-    background-color: #143E69;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
-
-}
-
-#slide-left-button, #slide-right-button{
-    
-    color: #000;
-    font-size: 30px;
-    z-index: 1;
-    margin-top:  -200px;
-
-    
-}
-
-#slide-left-button{
-    position: absolute;
-    display: block;
+    background-color: #B4DCE9;
+    padding: 0.25%;
     float: left;
-    margin-left:  5%;
-}
-#slide-right-button{
-    position: absolute;
-    display: block;
-    float: right;
-    margin-left:  95%;
 }
 
-#slideshow-container{
-    width: 800px;
-    position: relative;
-    margin: auto;
+.dots{
+width: 13px;
+height: 13px;
+background: #fff;
+display: inline-block;
+border-radius: 50%;
+cursor: pointer;
 
 }
-.slides{
-    display: none;
-    /*width: 350px
-    height:200px;
-    position: relative;
-    overflow: auto;*/
+
+.fade{
+animation-name:fade;
+animation-duration:1.5s;
 }
-/*.slides img{
-    max-width: 100%;
-    max-height: 100%;
-    position: relative;
-    opacity: 1;
-    transition: 1s;
-}*/
-/*.active{
-    opacity: 1;
-}*/
+
+@keyframes fade{
+from {opacity: 0.4;}
+to {opacity: 1;}
+}
+
+.active, .dot:hover {background-color: #333;}
+
 .number{
     position: absolute;
     padding: 8px 12px;
@@ -480,6 +536,84 @@ nav #menu ul{
 €keyframes fade{
     from{opacity: 0.4}
     to{opacity: 1}
+
+
+}
+
+/*----- Light */
+#light{
+    width: 100%;
+}
+
+
+/* --------------------------- Pacote DIV -------------- */
+#pacote-div{
+    width: 100%;
+    padding: 2% 5% 2% 0%;
+    background-color: #e6f7ff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: auto;
+}
+#plus-info{
+    font-weight: 200;
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 3%;
+}
+#pacote-div h3, #pacote-div p, #pacote-div #div-button{
+    margin-left: 5%;
+}
+#home-h3{
+    font-family: Cursive;
+    font-size: 20px;
+    padding: 0% 5% 0 0;
+    background-color: transparent;
+}
+#pacote-div p{
+    font-size: 13px;
+    text-align: left;
+}
+#pacote-div #local-encomenda-select{
+    width: 100%;
+    overflow: auto;
+}
+#pacote-div .button-encomendar{
+    float: left;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 20px 5px 0;
+    border:1px solid #333;
+    background-color: #143E69;
+    color: #fff;
+}
+/* -------     BLOG     ----*/
+#boxes{
+    width: 100%;
+    margin-left: 1%;
+    overflow: auto;
+}
+#blog, #price, #parceria{
+    width: 31%;
+    margin: 1% 2.33% 0 0;
+    float: left;
+}
+#blog img, #price img, #parceria img{
+    width: 100%;
+    height: 170px;
+    border: 1px solid #ccc;
+}
+#blog h3, #price h3, #parceria h3{
+    font-size: 13px;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+#blog p, #price p, #parceria p{
+    font-size: 13px;
+    text-align: justify;
+    padding: 5px;
+}
+#blog a p, #price a p, #parceria a p{
+    margin: 5px 0 5px 0;
+    text-align: center;
 }
 /* ---------------- Lojas & serviços -----------------*/
 #content-ls{
@@ -797,7 +931,7 @@ p{
 
 footer{
     width: 100%;
-    background-color: #4d5c75;
+    background-color: #121e30;
     color: #fff;
     bottom: 0;
     /*position: fixed;*/
@@ -810,7 +944,7 @@ footer a{
 footer #footer-wrapper{
     width: 70%;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 12px;
     overflow: auto;
 }
 #footer-sobre-nos, #footer-local, #footer-outros, #footer-social{
@@ -822,11 +956,17 @@ footer #footer-wrapper{
 }
 #footer-sobre-nos h6, #footer-local h6, #footer-outros h6, #footer-social h6{
     text-transform: uppercase;
+    font-family: cursive;
     font-size: 14px;
-    border-bottom: 1px solid #B4DCE9;
 }
-#footer-sobre-nos ul, #footer-local ul, #footer-outros ul, #footer-social ul{
+#footer-sobre-nos ul, #footer-local p, #footer-outros ul, #footer-social ul{
     list-style-type: none;
+    padding-left: 10px;
+}
+#footer-social img{
+    width: 48%;
+    margin: 1%;
+    float: left;
 }
 footer #copyright{
     text-align: center;
@@ -835,3 +975,279 @@ footer #copyright{
     padding: 0.5% 0 0.5% 0;
     
 }
+
+/*
+Phone size
+
+*/
+@media (max-width: 480px){
+    
+    /* Top header bar */
+    #header-phone-email{width: 100%;float: left;overflow: auto;}
+    #header-phone-email a span{font-size: 10px;}
+    #header-email{display: inline-block;float: right;}
+    #header-redes{display: inline-block;float: left;margin-left: 1.5%;}
+    #div-header-login{display: inline-block;float: right;}
+    #div-header-login a, .span-font{font-size: 10px;}
+    /* NAV */
+    nav{
+        width: 100%;
+    }
+
+    /* logo */
+    #div-logo{display: inline-block;
+        width:180px;
+        box-sizing: border-box;box-sizing: content-box; margin-left: 1.5%;padding-left: 0px;top:0;left: 0;float: left;overflow: auto;}
+    /*show phone menu*/
+    #main-div-logo{
+        width: 181px;
+        margin-left: 30%;
+        overflow: auto;
+    }
+    nav #menu-phone{display: block;
+        width: 40px;
+        margin-top: -28px;
+        margin-left: 10px;
+        padding-left: 10px;
+        float: left;
+        background-color: #598AB1;
+        border-radius: 10px 10px 0px 0px;
+    }
+    nav #menu-phone ul li span{
+        font-size: 20px;
+        color:#fff;
+    }
+    /*hide main menu*/
+    nav #menu{display: none;}
+    
+    #wrapper{
+        width: 100%;
+    }
+    .slideshow-container{
+        height: 200px;
+        overflow: auto;
+    }
+    #boxes{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #boxes #blog{
+        width: 100%;
+    }
+    #boxes #price{
+        width: 100%;
+    }
+    #boxes #parceria{
+        width: 100%;
+    }
+    #footer-wrapper{
+        width: 100%;
+    }
+    #footer-sobre-nos, #footer-local, #footer-outros, #footer-social{
+        box-sizing: border-box;
+        box-sizing: content-box;
+        margin: 0;
+        padding: 10px 0 10px 0;
+        width: 50%;
+        float: left;
+    }
+
+/*Pagina contactos */
+    #endereco, #form{
+        width: 100%;
+        
+    }
+/* Pagina blog*/
+    #wrapper #feed{
+        width: 98%;
+        margin: 0 auto;
+        padding-left: 1%;
+    }
+    #wrapper .loja{
+        width: 46%;
+        height: 150px;
+        float: left;
+    }
+    #wrapper .loja img{
+        width: 100%;
+        height: 100%;
+
+    }
+    /*
+    Pagina Quem somos
+    */
+    #wrapper .p-quem-somos{
+        box-sizing: border-box;
+        text-align: justify;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+    #wrapper #aside-quem-somos{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+    #wrapper #mvv{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px;
+
+
+    }
+    #wrapper #missao, #wrapper #visao, #wrapper #valores{
+        box-sizing: border-box;
+        width: 98%;
+        margin-left: 6%;
+        padding: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    /*
+    Paginal perfil
+    */
+    #perfil-aside, #perfil-content{
+        box-sizing: border-box;
+        width: 90%;
+        margin:5%;
+    }
+    #wrapper #perfil-imagem{
+        width: 50%;
+        height: 100%;
+    }
+    #wrapper #perfil-imagem img{
+        width: 100%;
+    }
+    #wrapper #perfil-aside a p{
+        width: 90%;
+    }
+
+
+
+}
+
+/*
+
+ */
+ @media only screen and (min-device-width: 481px) and (max-device-width: 594px){
+    /* Top header bar */
+    #header-phone-email{width: 100%;float: left;overflow: auto;}
+    #header-phone-email a span{font-size: 10px;}
+    #header-email{display: inline-block;float: right;}
+    #header-redes{display: inline-block;float: left;margin-left: 1.5%;}
+    #div-header-login{display: inline-block;float: right;}
+    #div-header-login a, .span-font{font-size: 10px;}
+
+    nav{
+        width: 100%;
+    }
+
+    #div-logo{display: inline-block;
+        width: 200px;
+        box-sizing: border-box;box-sizing: content-box; 
+        margin-left: 1.5%;
+        padding-left: 0px;
+        float: left;
+        overflow: auto;}
+
+        #main-div-logo{
+        width: 201px;
+        margin-left: 30%;
+        overflow: auto;
+    }
+    nav #menu-phone{display: block;
+        width: 40px;
+        margin-top: -28px;
+        margin-left: 10px;
+        padding-left: 10px;
+        float: left;
+        background-color: #598AB1;
+        border-radius: 10px 10px 0px 0px;
+    }
+    nav #menu-phone ul li span{
+        font-size: 20px;
+        color:#fff;
+    }
+    /*hide main menu*/
+    nav #menu{display: none;}
+
+    #wrapper{width: 100%;}
+ }
+ /* Ipad*/
+@media only screen and (min-device-width: 595px) and (max-device-width: 852px){
+     /* Top header bar */
+    #header-phone-email{width: 100%;float: left;overflow: auto;}
+    #header-phone-email a span{font-size: 10px;}
+    #header-email{display: inline-block;float: right;}
+    #header-redes{display: inline-block;float: left;margin-left: 1.5%;}
+    #div-header-login{display: inline-block;float: right;}
+    #div-header-login a, .span-font{font-size: 10px;}
+    nav{
+        width: 100%;
+    }
+    #main-div-logo{
+        width: 226px;
+        margin-left: 32%;
+        overflow: auto;
+    }
+    #div-logo{display: inline-block;
+        width: 225px;
+        box-sizing: border-box;box-sizing: content-box; 
+        margin-left: 1.5%;
+        padding-left: 0px;
+        float: left;
+        overflow: auto;
+    }
+    nav #menu-phone{display: block;
+        width: 40px;
+        margin-top: -28px;
+        margin-left: 10px;
+        padding-left: 10px;
+        float: left;
+        background-color: #598AB1;
+        border-radius: 10px 10px 0px 0px;
+    }
+    nav #menu-phone ul li span{
+        font-size: 20px;
+        color:#fff;
+    }
+    nav #menu{display: none;}
+    #wrapper{width: 100%;}
+
+}
+/*
+Ipad pro
+
+*/
+@media (min-width: 853px) and (max-width: 1208px) {
+      /* For portrait */
+    #div-logo{display: inline-block;
+        width: 250px;
+        box-sizing: border-box;box-sizing: content-box; 
+        margin-left: 1.5%;
+        padding-left: 0px;
+        float: left;
+        overflow: auto;}
+
+    nav{
+        width: 100%;
+    }
+    /*show phone menu*/
+    nav #menu-phone{display: none;
+        width: 40px;
+        margin-top: 61px;
+        margin-right: 10px;
+        padding-left: 10px;
+        float: right;
+        background-color: #598AB1;
+        border-radius: 10px 10px 0px 0px;
+        overflow: auto;
+    }
+    /*hide main menu*/
+    nav #menu{display: block;}
+    #wrapper{width: 100%;}
+
+}
+
+
+

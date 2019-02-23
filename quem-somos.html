@@ -2,14 +2,21 @@
 <!DOCTYPE html>
 <html>    
 <head>
-    <meta charset="utf-8">
-    <title>Quem somos | Souf Delivery</title>
-    <meta name ="keywords" content="Souf Delivery, Souf">
+    <meta http-equiv="content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Contactos - Souf Delivery</title>
+    <meta name="keywords" content="Souf Delivery, Souf">
     <meta name="description" content="A Souf delivery presta serviço de entregas rápidas e com qualidade, num ambiente de mercado amplo e que necessita de soluções ao problema actual de falta de capacidade de resposta eficiente na entrega das mercadorias. Nos facilitamos o fluxo de compras.">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/styles-pages.css">
     <link rel="stylesheet" href="icons/css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="jquery.slides.min.js"></script>
+    <!--<script type="text/javascript" src="js/scripts.js"></script> -->
+    <script type="text/javascript" src="js/script-slide.js"></script>
+
     <link rel="icon" href="imagens/favicon.png">
 </head>
 <!-- 
@@ -27,7 +34,7 @@ Scenario
                 <a id="header-email" class="fa fa-envelope-square" href="" target="_blank"><span id="header-email-text"><span class="span-font">souf.delivery@gmail.com</span></span></a>
             </div>
             <div id="div-header-login">
-                <a class="fa fa-user" href="login.html"><span class="span-font"> Login </span></a><span> | </span><a href="registro.html">Registrar</a>
+                <a class="fa fa-user" href="login.html"><span class="span-font"> Login </span></a><a href="login.html">Terminar sessão </a><span> | </span><a href="registro.html">Registrar</a>
             </div>
             <div id="header-redes">
                 <a  class="fa fa-facebook" href="" target="_blank"></a>
@@ -36,13 +43,31 @@ Scenario
             
         </div>
         <nav>
-            <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
+            <div id="main-div-logo">
+                <div id="div-logo"><a href="index.html"><img src="imagens/logo.png" alt="logo" /></div>
+            </div>
+            <div id="menu-phone">
+                <ul>
+                    <li><span class="fa fa-bars"></span>
+                        <ul>
+                            <ul class="ul" id="nav-left">
+                                <a href="index.html"><li><span class="fa fa-home"></span> Casa</li></a>
+                                <a href="lojas-servicos.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
+                                <a href="contactos.html"><li><span class="fa fa-at"></span> Contactos</li></a>
+                                <a id="ativa" href="quem-somos.html"><li><span class="fa fa-users" ></span> Quem somos</li></a>
+                                <a href="blog.html"><li><span class="fa fa-blog" ></span> Blog</li></a>
+                            </ul>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <div id="menu">
                 <ul class="ul" id="nav-left">
                     <a href="index.html"><li><span class="fa fa-home"></span> Casa</li></a>
-                    <a href="lojas-serviços.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
+                    <a href="lojas-servicos.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
                     <a href="contactos.html"><li><span class="fa fa-at"></span> Contactos</li></a>
                     <a id="ativa" href="quem-somos.html"><li><span class="fa fa-users" ></span> Quem somos</li></a>
+                    <a href="blog.html"><li><span class="fa fa-blog" ></span> Blog</li></a>
                 </ul>
             </div> 
         </nav>
@@ -113,7 +138,7 @@ Scenario
        
         
     </div><!-- End Wrapper -->
-    <footer>
+     <footer>
         <div id="footer-wrapper">
             <div id="footer-sobre-nos">
                 <h6>Sobre nós</h6>
@@ -126,7 +151,7 @@ Scenario
             <div id="footer-local">
                 <h6>Localização</h6>
                 <p>Benfica Estrada no 100, Rua do Por-do-Sol, Casa no 166, Luanda-Angola</p>
-                <br><p><a href="">Ver no mapa</a></p>
+                <br><p><a href="https://www.google.com/maps/place/Souf+Delivery/@-8.937449,13.157313,16z/data=!4m5!3m4!1s0x0:0xd8887cc63730e79c!8m2!3d-8.937449!4d13.157313?hl=pt-PT">Ver no mapa</a></p>
             </div> 
         
             <div id="footer-outros">
@@ -139,6 +164,8 @@ Scenario
             </div>
             <div id="footer-social">
                 <h6>Redes sociais</h6>
+                <a href="#"><img src="imagens/facebook-souf.jpg" alt="facebook"></a>
+                <a href="#"><img src="imagens/instagram-souf.jpg" alt="instagram"></a>
             </div>
         </div>             
         <p id="copyright">Souf Delivery &copy; <?php echo date("Y"); ?> 2018. Todos os direitos reservados.</p>

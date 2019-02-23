@@ -49,33 +49,20 @@ display: none;
 }
 
 .prev , .next{
-
 position: absolute;
-
 top: 50%;
-
 font-size: 18px;
-
 font-weight: bold;
-
 padding: 16px;
-
 margin-top: -22px;
-
 border-radius: 0 3px 3px 0;
-
 color: #fff;
-
 cursor: pointer;
-
 }
 
 .next{
-
 right: 0;
-
 border-radius: 3px 0 0 3px;
-
 }
 
 .prev:hover,.next:hover{
@@ -144,130 +131,110 @@ background-color: #333;
 
 <body onload="begin()">
 
-
 <div class="slideshow-container">
-
-
-<div class="myslides fade">
-
-<div class="numbers">1 / 4</div>
-
-<div><img src="imagens/1.jpg"></div>
-
-<div class="caption">Text 1</div>
-
+	<div class="myslides fade">
+		<div class="numbers">1 / 4</div>
+		<div><img id="slideshow" src="imagens/1.jpg"></div>
+		<div class="caption">Text 1</div>
+	</div>
+	<div class="myslides fade">
+		<div class="numbers">2 / 4</div>
+		<div><img src="imagens/2.jpg"></div>
+		<div class="caption">Text 2</div>
+	</div>
+	<div class="myslides fade">
+		<div class="numbers">3 / 4</div>
+		<div><img src="imagens/3.jpg"></div>
+		<div class="caption">Text 3</div>
+	</div>
+	<div class="myslides fade">
+		<div class="numbers">4 / 4</div>
+		<div><img src="imagens/4.jpg"></div>
+		<div class="caption">Text 4</div>
+	</div>
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-
-
-<div class="myslides fade">
-
-<div class="numbers">2 / 4</div>
-
-<div><img src="imagens/2.jpg"></div>
-
-<div class="caption">Text 2</div>
-
-</div>
-
-
-<div class="myslides fade">
-
-<div class="numbers">3 / 4</div>
-
-<div><img src="imagens/3.jpg"></div>
-
-<div class="caption">Text 3</div>
-
-</div>
-
-
-<div class="myslides fade">
-
-<div class="numbers">4 / 4</div>
-
-<div><img src="imagens/4.jpg"></div>
-
-<div class="caption">Text 4</div>
-
-</div>
-
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-
-</div>
-
 <br>
-
-
 <div style="text-align:center">
-
-<span class="dots" onclick="currentSlide(1)"></span> 
-
-<span class="dots" onclick="currentSlide(2)"></span> 
-
-<span class="dots" onclick="currentSlide(3)"></span> 
-
-<span class="dots" onclick="currentSlide(4)"></span> 
-
+	<span class="dots" onclick="currentSlide(1)"></span> 
+	<span class="dots" onclick="currentSlide(2)"></span> 
+	<span class="dots" onclick="currentSlide(3)"></span> 
+	<span class="dots" onclick="currentSlide(4)"></span> 
 </div>
-
 
 <script type="text/javascript">
 
 var slideIndex = 1;
 function begin(){
-	alert("ggoo");
 	showSlide(slideIndex);
-	
-
+	autoSlide();
 }
+
 function plusSlides(n){
-
-showSlide(slideIndex += n);
-
+	showSlide(slideIndex += n);
 }
 
 
 function currentSlide(n) {
-
-showSlide(slideIndex = n);
-
+	showSlide(slideIndex = n);
 }
-
 
 function showSlide(n){
-
-var i;
-
-var slides = document.getElementsByClassName("myslides");
-
-var dots = document.getElementsByClassName("dots");
-
-if (n > slides.length) { slideIndex = 1};
-
-if (n < 1) { slideIndex = slides.length};
-
-for (i=0;i<slides.length;i++) {
-
-slides[i].style.display = "none";
-
-};
-
-for (i=0;i<dots.length;i++) {
-
-dots[i].className = dots[i].className.replace(" active","");
-
-};
-
-slides[slideIndex-1].style.display = "block";
-
-dots[slideIndex-1].className += " active";
-
+	var i;
+	var slides = document.getElementsByClassName("myslides");
+	var dots = document.getElementsByClassName("dots");
+	if (n > slides.length) { slideIndex = 1};
+	if (n < 1) { slideIndex = slides.length};
+	for (i=0;i<slides.length;i++) {
+		slides[i].style.display = "none";
+	};
+	for (i=0;i<dots.length;i++) {
+		dots[i].className = dots[i].className.replace(" active","");
+	};
+	slides[slideIndex-1].style.display = "block";
+	dots[slideIndex-1].className += " active";
 }
 
+function autoSlide(){
+	var i;
+	var slides = document.getElementsByClassName("myslides");
+	for (i=0;i<slides.length;i++) {
+		slides[i].style.display = "none";
+	};
+	if (slideIndex > slides.length) { slideIndex = 1};
+	slides[slideIndex-1].style.display = "block";
+	slideIndex++;
+//Call slide in every 5 seconds
+	setTimeout(autoSlide, 5000);
+}
+/*
+function slideshow(){
+    var mySlide = document.getElementById("slideshow");
+    var img1 = new Image();
+    img1.src = "imagens/1.jpg";
+    var img2 = new Image();
+    img2.src = "imagens/2.jpg";
+    var img3 = new Image();
+    img3.src = "imagens/3.jpg";
+    var img4 = new Image();
+    img4.src = "imagens/4.jpg";
+    
+    var numberImage =1;
+    
+    function myslide(){
+        document.images.slideshow.src = eval("img"+ numberImage +".src");
+        if(numberImage < 4){
+            numberImage = numberImage + 1; 
+        }
+        else{
+            numberImage = 1;
+        }   
+        setTimeout(myslide, 5000);
+    }
+    myslide(); 
+}
+*/
 
 
 </script>

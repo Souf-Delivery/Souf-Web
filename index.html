@@ -13,54 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  <script src="jquery.slides.min.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="jquery.slides.min.js"></script>
+    <!--<script type="text/javascript" src="js/scripts.js"></script> -->
+    <script type="text/javascript" src="js/script-slide.js"></script>
 
     <link rel="icon" href="imagens/favicon.png">
-
-    <script type="text/javascript">
-        var slideIndex = 1;
-        var slide;
-        function start(){
-          showImage(slideIndex);   
-        }
-         
-        function showImage(n){
-
-            if(document.getElementByClassName){
-                slide = document.getElementsByClassName("slides");
-                alert("true");
-            }
-            else{
-                var elArray = [];
-                var tmp = document.getElementsByTagName("slide");  
-                var regex = new RegExp("(^|\\s)" + "slides"+ "(\\s|$)");
-                for ( var i = 0; i < tmp.length; i++ ) {
-
-                    if ( regex.test(tmp[i].slides) ) {
-                        elArray.push(tmp[i]);
-                    }
-                }
-                slide = elArray;
-                //alert("slide[1]");
-            }
-            /*var  
-            
-            
-            if(n > 2){
-                slideIndex = 1;
-            };
-            if(n < 1){
-                slideIndex = 2;
-            };*/
-            for (var i = 0; i < 2; i++) {
-                //slide[i].style.display = "none";
-            }
-            
-            //slide[slideIndex-1].style.display = "inline-block";
-
-        }
-    </script>
 </head>
 <!-- 
 Author: Tiago Afonso Kayaya
@@ -69,7 +26,7 @@ Date  : 12/11/2018
 index.html 
 Scenario
 -->
-<body onload="start()">
+<body onload="begin()">
     <header>
         <div id="header-top">
             <div id="header-phone-email">
@@ -86,161 +43,107 @@ Scenario
             
         </div>
         <nav>
-            <a href="index.html"><div id="div-logo"><img src="imagens/logo.png" alt="logo" /></div></a>
+            <div id="main-div-logo">
+                <div id="div-logo"><a href="index.html"><img src="imagens/logo.png" alt="logo" /></div>
+            </div>
+            <div id="menu-phone">
+                <ul>
+                    <li><span class="fa fa-bars"></span>
+                        <ul>
+                            <ul class="ul" id="nav-left">
+                                <a id="ativa" href="index.html"><li><span class="fa fa-home"></span> Casa</li></a>
+                                <a href="lojas-servicos.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
+                                <a href="contactos.html"><li><span class="fa fa-at"></span> Contactos</li></a>
+                                <a href="quem-somos.html"><li><span class="fa fa-users" ></span> Quem somos</li></a>
+                                <a href="blog.html"><li><span class="fa fa-blog" ></span> Blog</li></a>
+                            </ul>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <div id="menu">
                 <ul class="ul" id="nav-left">
                     <a id="ativa" href="index.html"><li><span class="fa fa-home"></span> Casa</li></a>
-                    <a href="lojas-serviços.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
+                    <a href="lojas-servicos.html"><li><span class="fa fa-window-restore"></span> Lojas & serviços</li></a>
                     <a href="contactos.html"><li><span class="fa fa-at"></span> Contactos</li></a>
                     <a href="quem-somos.html"><li><span class="fa fa-users" ></span> Quem somos</li></a>
-                    <a href="blog.html"><li><span class="fa fa-users" ></span> Blog</li></a>
+                    <a href="blog.html"><li><span class="fa fa-blog" ></span> Blog</li></a>
                 </ul>
             </div> 
         </nav>
         
     </header>
-    <div id="div-slideshow">
-            <img src="imagens/2.jpg" id="slideshow" alt="imagesslideshow">
-            <p><i id="slide-left-button" class="fa fa-chevron-circle-left"></i><i id="slide-right-button" class="fa fa-chevron-circle-right"></i></p>
-        </div>
-
-        <div id="slideshow-container">
-            <div style="display: block;" id="sliding" class="slides fade">
-                <div class="number">1 / 2</div>
-                <div><img src="imagens/1.jpg" id="slideshow" alt="imagesslideshow"></div>
-                <div class="text">Caption 1</div>
+    <div id="wrapper">
+        <div class="slideshow-container">
+            <div class="myslides fade">
+                <!--<div class="numbers">1 / 4</div>-->
+                <a href="#" onclick="lightbox_open();"><img src="imagens/slide/1.jpg"></a>
             </div>
-            <div class="slides">
-                <div class="number">2 / 2</div>
-                <div><img src="imagens/2.jpg" id="slideshow" alt="imagesslideshow"></div>
-                <div class="text">Caption 2</div>
+            <div class="myslides fade">
+                <!--<div class="numbers">2 / 4</div>-->
+                <img src="imagens/slide/2.jpg">
+            </div>
+            <div class="myslides fade">
+                <!--<div class="numbers">3 / 4</div>-->
+                <img src="imagens/slide/3.jpg">
+            </div>
+            <div class="myslides fade">
+                <!--<div class="numbers">4 / 4</div>-->
+                <img src="imagens/slide/4.jpg">    
             </div>
 
-            <a href="">
-                <i id="prev" class="fa fa-chevron-circle-left"></i>
-            </a>
-            <a href="">
-                <i id="next" class="fa fa-chevron-circle-right"></i>
-            </a>
-
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br />
-
-        <div id="div-pontos">
-            <span class="pontos"></span>
-            <span class="pontos"></span>
+        <div id="dots-div" style="text-align:center">
+            <span class="dots" onclick="currentSlide(1)"></span> 
+            <span class="dots" onclick="currentSlide(2)"></span> 
+            <span class="dots" onclick="currentSlide(3)"></span> 
+            <span class="dots" onclick="currentSlide(4)"></span> 
         </div>
-
-
-
-        <p id="content-p">Prestamos serviços de entrega rápidas, com qualidade e facilitamos o fluxo de compras.</p>
+          
+        <div id="light">
+          <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+          <video id="open-video" width="352" controls>
+              <source src="videos/video-souf.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div id="fade" onClick="lightbox_close();"></div>
         <div id="pacote-div">
+            <center><h6 id="plus-info">Somos uma empresa de entregas e marketing de lojas e produtos. <a href="#" onclick="lightbox_open();">Assista o nosso video!</a></h6></center>
             <h3 id="home-h3">Envie o seu pacote comnosco</h3>
             <p>Faça ja o envio do seu pacote ou selecione um produto nas nossas lojas</p>
-            <input class="button-encomendar" type="button" name="go" value="Encomendar">
-            <a href="lojas-serviços.html#lojas"><input class="button-encomendar" type="button" name="go" value="Ir para lojas"></a>
+            <div id="div-button">
+               <input class="button-encomendar" type="button" name="go" value="Encomendar">
+            <a href="lojas-servicos.html#lojas"><input class="button-encomendar" type="button" name="go" value="Ir para lojas"></a> 
+            </div>
+            
         </div>
-    <div id="wrapper">
-    <div id="blog">
-        <h3>Blog</h3>
-        <img src="imagens/blog.jpg" id="slideshow" alt="Blog">
-        <p>Acompanhe as nossas Souf Delivery no nosso blog e aproveite para deixar a sua opinião ou contributo para ajudar na melhoria dos nossos serviços.</p>
-        
-    </div>
-    <div id="preçario">
-        <h3>Preços </h3>
-        <img src="imagens/blog.jpg" id="slideshow" alt="Blog">
-        <p>Acompanhe as nossas Souf Delivery no nosso blog e aproveite para deixar a sua opinião ou contributo para ajudar na melhoria dos nossos serviços.</p>
-        
-    </div>
-        <div id="variedades">
-            <div id="price-div">
-                <h3>Consulte o preço dos nossos serviços</h3>
-            </div>
-            <div id="encomenda-info">
-                <h4>Como enviar o seu pacote pela Souf Delivery</h4>
-                <div class="encomendas">
-                <h5>Encomendar produto de uma loja</h5>
-                <ul class="passos-barra">
-                    <li>
-                        <p>
-                        <span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">1</strong></span>
-                        <span class="passos-texto"> Selecione a loja</span>
-                        </p>
-                        <div class="vertical-dash"></div>
-                    </li>
 
-                    <li> 
-                        <p><span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">2</strong></span>
-                       <span class="passos-texto">Selecione o produto nas nossa galeria de produtos</span></p>
-                       <div class="vertical-dash"></div> 
-                    </li>
-                    <li>
-                        <p><span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">3</strong></span>
-                        <span class="passos-texto">Insira a quantidade dos mesmos</span></p>
-                        <div class="vertical-dash"></div>
-                    </li>
-                    <li>
-                        <p>
-                        <span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">4</strong></span>
-                        <span class="passos-texto">Adicione detalhes do endereço para a entrega do produto</span></p>
-                        <div class="vertical-dash"></div>
-                    </li>
-                    <li>
-                        <p>
-                        <span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">5</strong></span>
-                        <span class="passos-texto">Selecione o método de pagamento</span></p>
-                        <div class="vertical-dash"></div>
-                    </li>
-                    <li>
-                        <p>
-                        <span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">6</strong></span>
-                        <span class="passos-texto">Assinar factura (Optional)</span></p>
-                        
-                    </li>
-                </ul>
-                </div>
-                <div class="encomendas">
-                <h5>Empresa ou particulares</h5>
-                <ul class="passos-barra">
-                    <li>
-                        <p>
-                        <span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">1</strong></span>
-                        <span class="passos-texto"> Descreve os produtos e suas quantidades</span>
-                        </p>
-                        <div class="vertical-dash"></div>
-                    </li>
-
-                    <li> 
-                        <p><span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">2</strong></span>
-                       <span class="passos-texto">Adicione detalhes do endereço para a coleção</span></p>
-                       <div class="vertical-dash"></div> 
-                    </li>
-                    <li> 
-                        <p><span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">3</strong></span>
-                       <span class="passos-texto">Adicione detalhes do endereço para a entrega do produto</span></p>
-                       <div class="vertical-dash"></div> 
-                    </li>
-                    <li>
-                        <p><span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">4</strong></span>
-                        <span class="passos-texto">Selecione o método de pagamento</span></p>
-                        <div class="vertical-dash"></div>
-                    </li>
-                    <li>
-                        <p>
-                        <span class="fa-stack"><span class="fa fa-circle fa-stack-2x"></span><strong class="fa-stack-1x">5</strong></span>
-                        <span class="passos-texto">Assinar factura (Optional)</span></p>
-                    </li>
-
-                </ul>
-            </div>
-            </div>
-            <div id="produtos">
-                <h4>Novos Produtos</h4>
-                <div id="novos-produtos"></div>
-            </div>
+    <div id="boxes">
+        <div id="blog">
+            <img src="imagens/blog.jpg" id="slideshow" alt="Blog">
+            <h3>Blog</h3>
+            <p>Acompanhe as nossas actividades no nosso blog e aproveite para deixar a sua opinião ou contributo para ajudar na melhoria dos nossos serviços.</p>
+            <a href="blog.html"><p>Saiba mais...</p></a>
+            
         </div>
+        <div id="price">
+            <img src="imagens/price.jpg" id="slideshow" alt="Blog">
+            <h3>Preços </h3>
+            <p>Os nossos preços variam de acordo com a localidade de destino do produto. Consulte o preço dos nossos serviços. Pague pouco, pague menos.</p>
+            <a href=""><p>Ver preços</p></a>
+            
+        </div>
+        <div id="parceria">
+            <img src="imagens/parceria.jpg" id="slideshow" alt="Blog">
+            <h3>Parceiros </h3>
+            <p>Adquira uma parceria com a Souf Delivery, e aproveite os melhores planos de serviços de entrega para a sua empresa.</p>
+            <a href=""><p>Saiba mais...</p></a>
+        </div>
+    </div>
     </div><!-- End Wrapper -->
+
     <footer>
         <div id="footer-wrapper">
             <div id="footer-sobre-nos">
@@ -254,7 +157,7 @@ Scenario
             <div id="footer-local">
                 <h6>Localização</h6>
                 <p>Benfica Estrada no 100, Rua do Por-do-Sol, Casa no 166, Luanda-Angola</p>
-                <br><p><a href="contactos.html#mapa">Ver no mapa</a></p>
+                <br><p><a href="https://www.google.com/maps/place/Souf+Delivery/@-8.937449,13.157313,16z/data=!4m5!3m4!1s0x0:0xd8887cc63730e79c!8m2!3d-8.937449!4d13.157313?hl=pt-PT">Ver no mapa</a></p>
             </div> 
         
             <div id="footer-outros">
@@ -267,6 +170,8 @@ Scenario
             </div>
             <div id="footer-social">
                 <h6>Redes sociais</h6>
+                <a href="#"><img src="imagens/facebook-souf.jpg" alt="facebook"></a>
+                <a href="#"><img src="imagens/instagram-souf.jpg" alt="instagram"></a>
             </div>
         </div>             
         <p id="copyright">Souf Delivery &copy; <?php echo date("Y"); ?> 2018. Todos os direitos reservados.</p>
